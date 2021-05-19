@@ -1,5 +1,6 @@
 :root {
   --diveblue: #20445E;
+  --divelightblue: #93c6d6;
 }
 
 /* NAVBAR  */
@@ -25,11 +26,11 @@
 }
 
 .navbarmenu a:hover {
-  border-bottom: solid 3px #93c6d6 ;
+  border-bottom: solid 3px var(--divelightblue) ;
 }
 
 .active {
-  background-color: #93c6d6;
+  background-color: var(--divelightblue);
   border-radius: 10px;
   color: #333 !important;
   border: none !important;
@@ -53,13 +54,14 @@
 /* MOBILE FIRST RESPONSIVE */
 
 @media only screen and (min-width: 640px) { /*para Tablet*/
- .navbarmenu {
-   display: inline;
- }
+  .navbarmenu {
+    display: inline;
+  }
 
- .hamburger {
-   display: none;
- }
+  .hamburger {
+    display: none;
+  }
+
 }
 
 @media only screen and (min-width: 1024px) { /*para Desktop*/

@@ -1,0 +1,26 @@
+import { NavLink } from "react-router-dom";
+import React from 'react'
+
+export default function Navbar() {
+    return (
+        <div>
+            <nav className="navbar">
+                    <div className="hamburger">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </div>
+                    <div className="navbarmenu">
+                        <NavLink to="/" activeClassName="active" exact={true}>Home</NavLink>
+                        <NavLink to="/destinations" activeClassName="active">Destinations</NavLink>
+                        <NavLink to="/divetypes" activeClassName="active">Dive Types</NavLink>
+                        <NavLink to="/diveshops" activeClassName="active">Dive Shops</NavLink>
+                    </div>
+                    <div>
+                        <NavLink to="/login">
+                            <i class="fas fa-user fa-lg"></i>
+                            <span>Login / Register</span>
+                        </NavLink>
+                    </div>
+                </nav>
+        </div>
+    )
+}
