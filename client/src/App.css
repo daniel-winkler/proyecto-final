@@ -26,7 +26,7 @@
   padding: 5px;
 }
 
-.navlinks a:hover {
+.navbar a:hover {
   border-bottom: solid 3px var(--divelightblue) ;
 }
 
@@ -113,6 +113,19 @@
 } 
 
 /* END LOGIN PAGE  */
+
+/* START FOOTER  */
+
+.footer {
+  background-color: var(--diveblue);
+  color: var(--divewhite);
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* END FOOTER  */
 
 /* START MOBILE FIRST RESPONSIVE */
 
