@@ -1,22 +1,37 @@
 import React from 'react'
+import { useHistory } from "react-router-dom";
+
 
 export default function Login() {
+
+    const history = useHistory();
+
+    function handleRegister() {
+        history.push("/register")
+    }
+
     return (
-        <>
-            <div>
-                <p>Registered customers</p>
+        <div className="loginpage">
+            <div className="loginform">
+                <h3>Registered customers</h3>
                 <form action="#" method="GET">
-                    <label htmlFor="userEmail">Email:</label>
-                    <input type="email" name="userEmail" id="userEmail" required/>
-                    <label htmlFor="userPassword">Password:</label>
-                    <input type="password" name="userPassword" id="userPassword" required/>
-                    <button type="submit">Sign In</button>
+                    <div>
+                        <label htmlFor="userEmail">Email:</label>
+                        <input type="email" name="userEmail" id="userEmail" required/>
+                    </div>
+                    <div>
+                        <label htmlFor="userPassword">Password:</label>
+                        <input type="password" name="userPassword" id="userPassword" required/>
+                    </div>
+                    <div>
+                        <button type="submit">Sign In</button>
+                    </div>
                 </form>
             </div>
-            <div>
-                <p>New customers</p>
-                <button>Create an account</button>
+            <div className="newaccount">
+                <h3>New customers</h3>
+                <button onClick={handleRegister}>Create an account</button>
             </div>
-        </>
+        </div>
     )
 }
