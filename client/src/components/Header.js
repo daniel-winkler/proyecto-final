@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Header() {
     return (
-        <div className="header">
+        <div id="header">
             <p>SCUBA BUDDY</p>
         </div>
     )

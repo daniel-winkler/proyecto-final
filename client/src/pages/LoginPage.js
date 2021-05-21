@@ -5,9 +5,14 @@ import Login from '../components/Login'
 
 export default function LoginPage() {
     return (
-        <div>
-            <Header />
-            <Login />
+        <div className="pagecontainer">
+            <div className="contentwrap">
+                <Header />
+                <Login />
+                <Login />
+                <Login />
+                <Login />
+            </div>
             <Footer />
         </div>
     )

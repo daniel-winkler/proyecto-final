@@ -11,7 +11,7 @@ export default function Login() {
     }
 
     return (
-        <div className="loginpage">
+        <div className="logincomponent">
             <div className="loginform">
                 <h3>Registered customers</h3>
                 <form action="#" method="GET">
