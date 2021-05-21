@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Register() {
     return (
-        <div className="registerform">
-            <form action="#" method="POST">
+        <div className="registercomponent">
+            <form action="#" method="POST" className="registerform">
                 <label htmlFor="newFirstName">First Name:</label>
                 <input type="text" name="newFirstName" id="newFirstName" required/>
                 <label htmlFor="newLastName">Last Name:</label>

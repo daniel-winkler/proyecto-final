@@ -1,25 +1,33 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import ErrorPage from "../pages/ErrorPage";
+import Navbar from "./Navbar";
+import Header from "./Header";
+import Footer from "./Footer";
 import IndexPage from "../pages/IndexPage";
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import ShopPage from "../pages/ShopPage";
-import Navbar from "./Navbar";
+import ErrorPage from "../pages/ErrorPage";
+import DestinationsPage from "../pages/DestinationsPage";
 
 
 export default function Router() {
     return (
-        <div>
-            <BrowserRouter>
-                <Navbar />
-                <Switch>
-                    <Route exact path="/" component={IndexPage} />
-                    <Route path="/diveshops" component={ShopPage} />
-                    <Route path="/login" component={LoginPage} />
-                    <Route path="/register" component={RegisterPage} />
-                    <Route component={ErrorPage} />
-                </Switch>
-            </BrowserRouter>
+        <div className="pagecontainer">
+            <div className="contentwrap">
+                <BrowserRouter>
+                    <Navbar />
+                    <Header />
+                    <Switch>
+                        <Route exact path="/" component={IndexPage} />
+                        <Route path="/diveshops" component={ShopPage} />
+                        <Route path="/login" component={LoginPage} />
+                        <Route path="/register" component={RegisterPage} />
+                        <Route path="/destinations" component={DestinationsPage} />
+                        <Route component={ErrorPage} />
+                    </Switch>
+                </BrowserRouter>
+            </div>
+            <Footer />
         </div>
     )
 }

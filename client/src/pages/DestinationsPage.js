@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Index() {
+export default function DestinationsPage() {
     return (
         <div>
-            Index
+            Destinations Page
         </div>
     )
 }

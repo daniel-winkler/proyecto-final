@@ -49,7 +49,7 @@
 
 /* START HEADER  */
 
-#header {
+.header {
   height: 100px;
   background-color: var(--diveblue);
   color: var(--divewhite);
@@ -71,8 +71,7 @@
 }
 
 .loginform,
-.newaccount,
-.registerform {
+.newaccount {
   /* flex-grow: 1; */
   background-color: var(--diveboxbg);
   border-radius: 10px;
@@ -116,6 +115,12 @@
 
 /* END LOGIN PAGE  */
 
+/* START REGISTER PAGE  */
+
+
+
+/* END REGISTER PAGE  */
+
 /* START FOOTER  */
 
 .pagecontainer {
@@ -127,7 +132,7 @@
   padding-bottom: 75px; /* footer height */
 }
 
-#footer {
+.footer {
   position: absolute;
   bottom: 0;
   width: 100%;
