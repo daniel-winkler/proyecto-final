@@ -6,7 +6,7 @@ export default function Navbar() {
         <div>
             <nav className="navbar">
                     <div className="hamburger">
-                        <i class="fas fa-bars fa-lg"></i>
+                        <i className="fas fa-bars fa-lg"></i>
                     </div>
                     <div className="navlinks">
                         <NavLink to="/" activeClassName="active" exact={true}>Home</NavLink>
@@ -16,7 +16,7 @@ export default function Navbar() {
                     </div>
                     <div className="navlogin">
                         <NavLink to="/login">
-                            <i class="fas fa-user fa-lg"></i>
+                            <i className="fas fa-user fa-lg"></i>
                             <span>Login / Register</span>
                         </NavLink>
                     </div>
