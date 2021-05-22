@@ -95,7 +95,7 @@
   border-radius: 5px;
   margin-top: 5px;
   height: 25px;
-  width: 200px;
+  width: 75%;
 }
 
 .loginform button,
@@ -117,7 +117,50 @@
 
 /* START REGISTER PAGE  */
 
+.registercomponent {
+  display: flex;
+  flex-direction: column;
+  /* width: 80%; */
+  justify-content: center;
+}
 
+.registerform {
+  /* flex-grow: 1; */
+  background-color: var(--diveboxbg);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.registerform h4 {
+  margin-top: 0px;
+}
+
+.registerform input,
+.registerform select {
+  display: block;
+  border: solid 1px grey;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px; /* different from login form */
+  height: 25px;
+  width: 75%;
+}
+
+.registerform button {
+  border: solid 1px grey;
+  border-radius: 5px;
+  font-size: large;
+  margin-top: 10px;
+  background-color: var(--diveblue);
+  color: var(--divewhite);
+  cursor: pointer;
+}
+
+
+.registerform button:hover {
+  background-color: var(--divelightblue);
+} 
 
 /* END REGISTER PAGE  */
 
