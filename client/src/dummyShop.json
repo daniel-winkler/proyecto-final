@@ -8,11 +8,11 @@
         "es",
         "de"
     ],
-    "cert-agencies": [
+    "cert_agencies": [
         "PADI",
         "SSI"
     ],
-    "dive-types": [
+    "dive_types": [
         "night dive",
         "wreck dive",
         "wall dive",
