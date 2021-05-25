@@ -1,0 +1,121 @@
+{
+    "page": 1,
+    "total_pages": 1,
+    "total_results": 3,
+    "results": [
+        {
+            "id": 1,
+            "name": "Pura Vida",
+            "location": "Koh Tao, Thailand",
+            "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eius ratione molestiae nostrum facere eaque dicta debitis saepe maxime voluptate fuga suscipit praesentium, delectus a adipisci? Ut similique aperiam exercitationem!",
+            "languages": [
+                "en",
+                "es",
+                "de"
+            ],
+            "cert-agencies": [
+                "PADI",
+                "SSI"
+            ],
+            "dive-types": [
+                "night dive",
+                "wreck dive",
+                "wall dive",
+                "deep dive",
+                "cave dive",
+                "shore dive",
+                "reef dive"
+            ],
+            "contact": {
+                "email": "puravida@gmail.com",
+                "phone": "562345252",
+                "website": "www.puravida.com"
+            },
+            "address": {
+                "street": "9/24",
+                "city": "Koh Tao",
+                "zip": "84360",
+                "country": "Thailand"
+            },
+            "coordinates": {
+                "lat": "10.085617506229124",
+                "long": "99.82750260582262"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Zen Divers",
+            "location": "Amed Beach, Bali, Indonesia",
+            "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eius ratione molestiae nostrum facere eaque dicta debitis saepe maxime voluptate fuga suscipit praesentium, delectus a adipisci? Ut similique aperiam exercitationem!",
+            "languages": [
+                "en"
+            ],
+            "cert-agencies": [
+                "PADI",
+                "SSI"
+            ],
+            "dive-types": [
+                "night dive",
+                "wreck dive",
+                "wall dive",
+                "deep dive",
+                "cave dive",
+                "shore dive",
+                "reef dive"
+            ],
+            "contact": {
+                "email": "zendivers@gmail.com",
+                "phone": "981621461",
+                "website": "www.zendivers.com"
+            },
+            "address": {
+                "street": "Purwakerti Abang",
+                "city": "Bali",
+                "zip": "80852",
+                "country": "Indonesia"
+            },
+            "coordinates": {
+                "lat": "-8.334208806467604",
+                "long": "115.64698322169495"
+            }
+        },
+        {
+            "id": 3,
+            "name": "Apo Diver",
+            "location": "Siquijor, Philippines",
+            "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eius ratione molestiae nostrum facere eaque dicta debitis saepe maxime voluptate fuga suscipit praesentium, delectus a adipisci? Ut similique aperiam exercitationem!",
+            "languages": [
+                "en",
+                "de"
+            ],
+            "cert-agencies": [
+                "PADI",
+                "SSI"
+            ],
+            "dive-types": [
+                "night dive",
+                "wreck dive",
+                "wall dive",
+                "deep dive",
+                "cave dive",
+                "shore dive",
+                "reef dive"
+            ],
+            "contact": {
+                "email": "apodiver@gmail.com",
+                "phone": "356121654",
+                "website": "www.apodiver.com"
+            },
+            "address": {
+                "street": "Solangon Beach San Juan",
+                "city": "Siquijor",
+                "zip": "6227",
+                "country": "Philippines"
+            },
+            "coordinates": {
+                "lat": "9.168861835657985",
+                "long": "123.48423389813362"
+            }
+        }
+    ]
+}
