@@ -1,3 +1,3 @@
-const GOOGLE_API_KEY = "AIzaSyAZNFiayD6z5kWofd9MkPjZUj2eMO1Umls";
+const GOOGLE_API_KEY = process.env.REACT_APP_API_KEY_GOOGLE;
 
 export { GOOGLE_API_KEY }
