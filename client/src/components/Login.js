@@ -24,13 +24,13 @@ export default function Login() {
                         <input type="password" name="userPassword" id="userPassword" required/>
                     </div>
                     <div>
-                        <button type="submit">Sign In</button>
+                        <button className="button" type="submit">Sign In</button>
                     </div>
                 </form>
             </div>
             <div className="newaccount">
                 <h3>New customers</h3>
-                <button onClick={handleRegister}>Create an account</button>
+                <button className="button" onClick={handleRegister}>Create an account</button>
             </div>
         </div>
     )

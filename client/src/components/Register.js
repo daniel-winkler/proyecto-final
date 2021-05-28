@@ -32,7 +32,7 @@ export default function Register() {
                     <option value="shop" name="newShop">Shop</option>
                 </select>
 
-                <button type="submit">Submit</button>
+                <button className="button" type="submit">Submit</button>
             </form>
             
         </div>

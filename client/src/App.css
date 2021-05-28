@@ -5,6 +5,23 @@
   --divewhite: #f5f5f5; /* Text color */
 }
 
+/* START BUTTON  */
+
+.button {
+  border: solid 1px grey;
+  border-radius: 5px;
+  font-size: large;
+  background-color: var(--diveblue);
+  color: var(--divewhite);
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--divelightblue);
+} 
+
+/* END BUTTON  */
+
 /* START NAVBAR  */
 
 .navbar {
@@ -98,21 +115,6 @@
   width: 75%;
 }
 
-.loginform button,
-.newaccount button {
-  border: solid 1px grey;
-  border-radius: 5px;
-  font-size: large;
-  background-color: var(--diveblue);
-  color: var(--divewhite);
-  cursor: pointer;
-}
-
-.loginform button:hover,
-.newaccount button:hover {
-  background-color: var(--divelightblue);
-} 
-
 /* END LOGIN PAGE  */
 
 /* START REGISTER PAGE  */
@@ -147,21 +149,6 @@
   width: 75%;
 }
 
-.registerform button {
-  border: solid 1px grey;
-  border-radius: 5px;
-  font-size: large;
-  margin-top: 10px;
-  background-color: var(--diveblue);
-  color: var(--divewhite);
-  cursor: pointer;
-}
-
-
-.registerform button:hover {
-  background-color: var(--divelightblue);
-} 
-
 /* END REGISTER PAGE  */
 
 /* START SHOP PAGE  */
@@ -181,6 +168,11 @@
 .shop h3,
 .shop h4 {
   margin-top: 0px;
+}
+
+.shop input,
+.shop textarea {
+  display: block;
 }
 
 /* END SHOP PAGE  */
