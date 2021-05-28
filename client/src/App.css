@@ -173,6 +173,16 @@
   margin: 10px;
 }
 
+.shop span {
+  margin-right: 10px;
+}
+
+.shop h2,
+.shop h3,
+.shop h4 {
+  margin-top: 0px;
+}
+
 /* END SHOP PAGE  */
 
 /* START FOOTER  */

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Map from './Map';
 
 export default function Shop() {
 
@@ -32,6 +33,17 @@ export default function Shop() {
                         <span>{language}</span>
                     )
                 })}</p>
+            </div>
+            <div className="shop">
+                <h4>Dive Types:</h4>
+                <p>{shop.dive_types?.map(type => {
+                    return (
+                        <span>{type}</span>
+                    )
+                })}</p>
+            </div>
+            <div className="shop">
+                <Map />
             </div>
         </>
     )
