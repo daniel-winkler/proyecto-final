@@ -55,7 +55,7 @@ export default function Shop() {
                     <input type="email" name="contactEmail" id="contactEmail" required/>
                     <label htmlFor="contactMessage">Message:</label>
                     <textarea name="contactEmail" id="contactMessage"></textarea>
-                    <button className="button" type="submit">Send Message</button>
+                    <button type="submit">Send Message</button>
                 </form>
             </div>
         </>

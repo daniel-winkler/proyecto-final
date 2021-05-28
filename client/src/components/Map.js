@@ -5,9 +5,9 @@ import { GOOGLE_API_KEY } from "../config";
 const containerStyle = {
     width: '100%',
     height: '400px'
-  };
+};
   
-  export default function Map({latitude, longitude}) {
+export default function Map({latitude, longitude}) {
 
     const center = {
         lat: Number(latitude),
