@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
+import { countryCodeEmoji, emojiCountryCode } from 'country-code-emoji'; // https://www.npmjs.com/package/country-code-emoji
 import Map from './Map';
 
 export default function Shop() {
 
     const [shop, setShop] = useState([])
 
-    const SHOP_URL = "https://run.mocky.io/v3/5cc0f585-70bb-4172-bfcf-763593f2d30c";
+    const SHOP_URL = "https://run.mocky.io/v3/87d3cbad-cdb0-4a55-adba-17ed29dfce25";
 
     useEffect(() => {
         fetch(SHOP_URL)
@@ -30,7 +31,7 @@ export default function Shop() {
                 <h4>Languages:</h4>
                 <p>{shop.languages?.map(language => {
                     return (
-                        <span>{language}</span>
+                        <span>{countryCodeEmoji(language)}</span>
                     )
                 })}</p>
             </div>

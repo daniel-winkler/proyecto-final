@@ -1,5 +1,5 @@
 import React from 'react'
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api'; // https://www.npmjs.com/package/@react-google-maps/api
 import { GOOGLE_API_KEY } from "../config";
 
 const containerStyle = {
