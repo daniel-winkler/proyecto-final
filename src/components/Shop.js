@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { countryCodeEmoji, emojiCountryCode } from 'country-code-emoji'; // https://www.npmjs.com/package/country-code-emoji
+import { countryCodeEmoji } from 'country-code-emoji'; // https://www.npmjs.com/package/country-code-emoji
 import Map from './Map';
 
 export default function Shop() {
@@ -31,7 +31,7 @@ export default function Shop() {
                 <h4>Languages:</h4>
                 <p>{shop.languages?.map(language => {
                     return (
-                        <span>{countryCodeEmoji(language)}</span>
+                        <span className="flags">{countryCodeEmoji(language)}</span>
                     )
                 })}</p>
             </div>

@@ -164,6 +164,10 @@ button:hover {
   margin-right: 10px;
 }
 
+.flags {
+  font-size: 1.6em;
+}
+
 .shop h2,
 .shop h3,
 .shop h4 {
