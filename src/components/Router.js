@@ -8,6 +8,7 @@ import RegisterPage from "../pages/RegisterPage";
 import ShopPage from "../pages/ShopPage";
 import ErrorPage from "../pages/ErrorPage";
 import DestinationsPage from "../pages/DestinationsPage";
+import SearchPage from "../pages/SearchPage";
 
 
 export default function Router() {
@@ -19,6 +20,7 @@ export default function Router() {
                     <Header />
                     <Switch>
                         <Route exact path="/" component={IndexPage} />
+                        <Route path="/search" component={SearchPage} />
                         <Route path="/diveshops" component={ShopPage} />
                         <Route path="/login" component={LoginPage} />
                         <Route path="/register" component={RegisterPage} />
