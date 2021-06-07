@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { countryCodeEmoji } from 'country-code-emoji'; // https://www.npmjs.com/package/country-code-emoji
 import Map from './Map';
+import Contactform from './Contactform';
 
 export default function Shop() {
 
@@ -47,18 +48,7 @@ export default function Shop() {
                 <h4>Location</h4>
                 <Map latitude={shop.coordinates?.lat} longitude={shop.coordinates?.long}/>
             </div>
-            <div className="shop">
-                <h4>Contact the shop</h4>
-                <form action="#" method="POST">
-                    <label htmlFor="contactName">Name:</label>
-                    <input type="text" name="contactName" id="contactName" required/>
-                    <label htmlFor="contactEmail">Email:</label>
-                    <input type="email" name="contactEmail" id="contactEmail" required/>
-                    <label htmlFor="contactMessage">Message:</label>
-                    <textarea name="contactEmail" id="contactMessage"></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
+            <Contactform />
         </>
     )
 }
