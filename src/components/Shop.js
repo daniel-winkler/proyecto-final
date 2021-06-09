@@ -2,12 +2,11 @@ import { useEffect, useState } from 'react'
 import { countryCodeEmoji } from 'country-code-emoji'; // https://www.npmjs.com/package/country-code-emoji
 import Map from './Map';
 import Contactform from './Contactform';
+import { SHOP_URL } from "../config";
 
 export default function Shop() {
 
     const [shop, setShop] = useState([])
-
-    const SHOP_URL = "https://ae27b9c3-c7f2-4eba-a4b2-4221fea12dd8.mock.pstmn.io/"; // https://run.mocky.io/v3/87d3cbad-cdb0-4a55-adba-17ed29dfce25
 
     useEffect(() => {
         fetch(SHOP_URL)
