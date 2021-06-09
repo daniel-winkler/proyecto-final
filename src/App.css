@@ -151,6 +151,22 @@ button:hover {
 
 /* END REGISTER PAGE  */
 
+/* START SEARCH PAGE  */
+
+.card {
+  background-color: var(--diveboxbg);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.card span {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+/* END SEARCH PAGE  */
+
 /* START SHOP PAGE  */
 
 .shop {
