@@ -9,7 +9,7 @@
             "location": "Koh Tao, Thailand",
             "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eius ratione molestiae nostrum facere eaque dicta debitis saepe maxime voluptate fuga suscipit praesentium, delectus a adipisci? Ut similique aperiam exercitationem!",
             "languages": [
-                "en",
+                "gb",
                 "es",
                 "de"
             ],
@@ -48,7 +48,8 @@
             "location": "Amed Beach, Bali, Indonesia",
             "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eius ratione molestiae nostrum facere eaque dicta debitis saepe maxime voluptate fuga suscipit praesentium, delectus a adipisci? Ut similique aperiam exercitationem!",
             "languages": [
-                "en"
+                "gb",
+                "fr"
             ],
             "cert-agencies": [
                 "PADI",
@@ -85,8 +86,10 @@
             "location": "Siquijor, Philippines",
             "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eius ratione molestiae nostrum facere eaque dicta debitis saepe maxime voluptate fuga suscipit praesentium, delectus a adipisci? Ut similique aperiam exercitationem!",
             "languages": [
-                "en",
-                "de"
+                "gb",
+                "it",
+                "no",
+                "jp"
             ],
             "cert-agencies": [
                 "PADI",
