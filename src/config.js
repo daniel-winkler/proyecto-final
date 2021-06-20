@@ -5,7 +5,7 @@ const SHOP_URL = "https://run.mocky.io/v3/87d3cbad-cdb0-4a55-adba-17ed29dfce25";
 const SERVER_PORT = 8000;
 // const CLIENT_PORT = 3000;
 
-const ROOT_URL = "localhost:" + SERVER_PORT;
+const ROOT_URL = "http://localhost:" + SERVER_PORT;
 
 export { 
     ROOT_URL,
