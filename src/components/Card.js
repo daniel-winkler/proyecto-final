@@ -17,8 +17,8 @@ export default function Card({shop}) {
             <img src={placeholder} width={200} alt={"Shop"}/>
             <h3>{shop.name}</h3>
             <h4>{shop.location}</h4>
-            <p>{shop.languages?.map(lang => {
-                return( <span>{countryCodeEmoji(lang.countrycode)}</span> )
+            <p>{shop.languages?.map(language => {
+                return( <span key={language.id}>{countryCodeEmoji(language.countrycode)}</span> )
             })}</p>
             <div>
                 <button onClick={()=>moreInfo(shop.id)}>More Info</button>

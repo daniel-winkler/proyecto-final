@@ -31,7 +31,7 @@ export default function Shop() {
                 })}</p> */}
                 <h4>Languages:</h4>
                 <p>{shop.languages?.map(language => {
-                    return ( <span className="flags">{countryCodeEmoji(language.countrycode)}</span> )
+                    return ( <span key={language.id} className="flags">{countryCodeEmoji(language.countrycode)}</span> )
                 })}</p>
             </div>
             {/* <div className="shop">

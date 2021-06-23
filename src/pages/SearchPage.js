@@ -15,7 +15,7 @@ export default function SearchPage() {
     return (
         <div>
             {search.map(shop => {
-                return ( <Card shop={shop} /> )
+                return ( <Card key={shop.id} shop={shop} /> )
             })}
         </div>
     )
