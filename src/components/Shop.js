@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react'
+import { useParams } from "react-router-dom";
 import { countryCodeEmoji } from 'country-code-emoji'; // https://www.npmjs.com/package/country-code-emoji
 import Map from './Map';
 import Contactform from './Contactform';
 import { SHOP_URL } from "../config";
 
 export default function Shop() {
+
+    const { id } = useParams();
 
     const [shop, setShop] = useState([])
 

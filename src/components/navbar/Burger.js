@@ -5,9 +5,9 @@ export default function Burger() {
     return (
         <>
             {/* TODO: needs styling !! */}
-            <Menu>
+            {/* <Menu> */}
                 <Navlinks />
-            </Menu>
+            {/* </Menu> */}
         </>
     )
 }

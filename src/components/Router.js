@@ -21,7 +21,7 @@ export default function Router() {
                     <Switch>
                         <Route exact path="/" component={IndexPage} />
                         <Route path="/search" component={SearchPage} />
-                        <Route path="/diveshops" component={ShopPage} />
+                        <Route path="/shop/:id" component={ShopPage} />
                         <Route path="/login" component={LoginPage} />
                         <Route path="/register" component={RegisterPage} />
                         <Route path="/destinations" component={DestinationsPage} />
