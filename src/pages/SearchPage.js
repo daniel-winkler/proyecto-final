@@ -13,7 +13,7 @@ export default function SearchPage() {
     }, [])
 
     return (
-        <div>
+        <div className="cardgrid">
             {search.map(shop => {
                 return ( <Card key={shop.id} shop={shop} /> )
             })}
