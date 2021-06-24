@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import Navlinks from "./Navlinks";
-import Burger from "./Burger";
 
 export default function Navbar() {
     return (
@@ -8,7 +7,6 @@ export default function Navbar() {
             <nav className="navbar">
                     <div className="hamburger">
                         <i className="fas fa-bars fa-lg"></i>
-                        <Burger />
                     </div>
                     <div className="navlinks">
                         <Navlinks/>
