@@ -1,5 +1,5 @@
 import React from 'react'
-import placeholder from "../images/placeholder.jpg";
+import placeholder from "../../images/placeholder.jpg";
 import { countryCodeEmoji } from 'country-code-emoji'; // https://www.npmjs.com/package/country-code-emoji
 import { useHistory } from "react-router-dom";
 

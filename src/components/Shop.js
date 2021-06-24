@@ -15,7 +15,7 @@ export default function Shop() {
         fetch(ROOT_URL + `/shopdetails/${id}`)
         .then(r => r.json())
         .then(data => setShop(data))
-    }, [])
+    }, [id])
 
     return (
         <>
