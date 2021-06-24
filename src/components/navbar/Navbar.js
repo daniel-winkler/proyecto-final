@@ -1,12 +1,15 @@
 import { NavLink } from "react-router-dom";
 import Navlinks from "./Navlinks";
+import Collapsible from "react-collapsible"; // https://www.npmjs.com/package/react-collapsible
 
 export default function Navbar() {
     return (
         <div>
             <nav className="navbar">
                     <div className="hamburger">
-                        <i className="fas fa-bars fa-lg"></i>
+                        <Collapsible trigger="" triggerClassName="fas fa-bars fa-lg" triggerTagName="i" > {/* <i className="fas fa-bars fa-lg"></i> */}
+                            <Navlinks />
+                        </Collapsible>
                     </div>
                     <div className="navlinks">
                         <Navlinks/>
