@@ -13,21 +13,27 @@ export default function Filter() {
         .then(data => setLanguages(data))
     }, [])
 
+    const [destinations, setDestinations] = useState([])
+
+    useEffect(() => {
+        fetch(ROOT_URL + "/destinations")
+        .then(r => r.json())
+        .then(data => setDestinations(data))
+    }, [])
+
     return (
         <aside className="filterbox">
             <h3>Filter By:</h3>
             <Collapsible trigger="Destination">
+                {destinations.map(destination => {
+                    return(
+                        <div key={destination.id} className="checkboxblock">
+                            <input type="checkbox" name="" id={destination.id} /><label htmlFor={destination.id}>{destination.name}</label>
+                        </div>
+                    )
+                })}
                 <div className="checkboxblock">
                     <input type="checkbox" name="" id="destination1" /><label htmlFor="destination1">South East Asia</label>
-                </div>
-                <div className="checkboxblock">
-                    <input type="checkbox" name="" id="destination2" /><label htmlFor="destination2">Caribbeans</label>
-                </div>
-                <div className="checkboxblock">
-                    <input type="checkbox" name="" id="destination3" /><label htmlFor="destination3">Central America</label>
-                </div>
-                <div className="checkboxblock">
-                    <input type="checkbox" name="" id="destination4" /><label htmlFor="destination4">Oceania</label>
                 </div>
             </Collapsible>
             <Collapsible trigger="Language">
