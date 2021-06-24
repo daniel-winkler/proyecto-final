@@ -153,6 +153,11 @@ button:hover {
 
 /* START SEARCH PAGE  */
 
+.searchpage {
+  display: flex;
+  flex-direction: column;
+}
+
 .card {
   background-color: var(--diveboxbg);
   border-radius: 10px;
@@ -243,7 +248,12 @@ button:hover {
     flex-direction: row;
   }
 
+  .searchpage {
+    flex-direction: row;
+  }
+
   .cardgrid {
+    flex-grow: 1;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
   }

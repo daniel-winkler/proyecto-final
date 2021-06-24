@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Card from '../components/searchpage/Card';
 import { ROOT_URL } from "../config";
+import Filter from "../components/searchpage/Filter";
 
 export default function SearchPage() {
 
@@ -13,10 +14,13 @@ export default function SearchPage() {
     }, [])
 
     return (
-        <div className="cardgrid">
-            {search.map(shop => {
-                return ( <Card key={shop.id} shop={shop} /> )
-            })}
+        <div className="searchpage">
+            <Filter />
+            <div className="cardgrid">
+                {search.map(shop => {
+                    return ( <Card key={shop.id} shop={shop} /> )
+                })}
+            </div>
         </div>
     )
 }
