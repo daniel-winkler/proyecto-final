@@ -5,6 +5,7 @@ import Map from './Map';
 import Contactform from './Contactform';
 import { ROOT_URL } from "../config";
 
+
 export default function Shop() {
 
     const { id } = useParams();
@@ -39,11 +40,11 @@ export default function Shop() {
                 <p>{shop.dive_types?.map(type => {
                     return ( <span>{type}</span> )
                 })}</p>
-            </div>
+            </div> */}
             <div className="shop">
                 <h4>Location</h4>
-                <Map latitude={shop.coordinates?.lat} longitude={shop.coordinates?.long}/>
-            </div> */}
+                <Map latitude="-28.882304674138656" longitude="143.3486875" />
+            </div>
             <Contactform />
         </>
     )

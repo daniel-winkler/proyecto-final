@@ -14,8 +14,14 @@ export default function Map({latitude, longitude}) {
         lng: Number(longitude)
     };
 
+    function getInfo(e){
+        console.log(e.target);
+    }
+
+    // https://developers.google.com/maps/documentation/javascript/examples/event-click-latlng#maps_event_click_latlng-javascript
+
     return (
-        <div>
+        <div onClick={(e) => getInfo(e)}>
             <LoadScript googleMapsApiKey={GOOGLE_API_KEY}>
                 <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={15}>
                     { /* Child components, such as markers, info windows, etc. */ }
