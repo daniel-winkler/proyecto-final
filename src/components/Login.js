@@ -1,5 +1,7 @@
 import React from 'react'
 import { useHistory } from "react-router-dom";
+import { useForm } from '../hooks/useForm';
+import { ROOT_URL } from '../config';
 
 
 export default function Login() {
@@ -10,18 +12,35 @@ export default function Login() {
         history.push("/register")
     }
 
+    const formInitialState = {username: "", password: ""};
+    const [form, handleInputChange] = useForm(formInitialState);
+
+    async function handleSubmit(e) {
+        e.preventDefault();
+
+        const options = {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(form)
+        }
+
+        const response = await fetch(ROOT_URL + "/api/login_check", options);
+        const data = await response.json();
+        console.log(data);
+    }
+
     return (
         <div className="logincomponent">
             <div className="loginform">
                 <h3>Registered customers</h3>
-                <form action="#" method="GET">
+                <form onSubmit={handleSubmit}>
                     <div>
-                        <label htmlFor="userEmail">Email:</label>
-                        <input type="email" name="userEmail" id="userEmail" required/>
+                        <label htmlFor="userUsername">Username:</label>
+                        <input onChange={handleInputChange} value={form.username} type="text" name="username" id="userUsername" required/>
                     </div>
                     <div>
                         <label htmlFor="userPassword">Password:</label>
-                        <input type="password" name="userPassword" id="userPassword" required/>
+                        <input onChange={handleInputChange} value={form.password} type="password" name="password" id="userPassword" required/>
                     </div>
                     <div>
                         <button type="submit">Sign In</button>
