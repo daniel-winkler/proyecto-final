@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { countryCodeEmoji } from 'country-code-emoji'; // https://www.npmjs.com/package/country-code-emoji
 import Map from './Map';
 import Contactform from './Contactform';
-import { ROOT_URL } from "../config";
+import { DETAILS_URL } from "../config";
 
 
 export default function Shop() {
@@ -13,7 +13,7 @@ export default function Shop() {
     const [shop, setShop] = useState({})
 
     useEffect(() => {
-        fetch(ROOT_URL + `/shopdetails/${id}`)
+        fetch(DETAILS_URL + id)
         .then(r => r.json())
         .then(data => setShop(data))
     }, [id])

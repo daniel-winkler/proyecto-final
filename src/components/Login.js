@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from "react-router-dom";
 import { useForm } from '../hooks/useForm';
-import { ROOT_URL } from '../config';
+import { LOGIN_URL } from '../config';
 
 
 export default function Login() {
@@ -24,7 +24,7 @@ export default function Login() {
             body: JSON.stringify(form)
         }
 
-        const response = await fetch(ROOT_URL + "/api/login_check", options);
+        const response = await fetch(LOGIN_URL, options);
         const data = await response.json();
         console.log(data);
     }

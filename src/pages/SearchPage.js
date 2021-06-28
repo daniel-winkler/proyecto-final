@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Card from '../components/searchpage/Card';
-import { ROOT_URL } from "../config";
+import { SHOPS_URL } from "../config";
 import Filter from "../components/searchpage/Filter";
 
 export default function SearchPage() {
@@ -8,7 +8,7 @@ export default function SearchPage() {
     const [search, setSearch] = useState([])
 
     useEffect(() => {
-        fetch(ROOT_URL + "/shops")
+        fetch(SHOPS_URL)
         .then(r => r.json())
         .then(data => setSearch(data))
     }, [])

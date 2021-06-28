@@ -1,6 +1,6 @@
 import React from 'react'
 import { useForm } from '../hooks/useForm'
-import { ROOT_URL } from '../config'
+import { REGISTER_URL } from '../config'
 
 export default function Register() {
 
@@ -18,7 +18,7 @@ export default function Register() {
             body: JSON.stringify(form)
         }
 
-        const response = await fetch(ROOT_URL + "/register", options);
+        const response = await fetch(REGISTER_URL, options);
         const data = await response.json();
         console.log(data);
     }
