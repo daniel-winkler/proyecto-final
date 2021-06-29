@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import React from 'react';
 import Collapsible from 'react-collapsible'; // https://www.npmjs.com/package/react-collapsible
-import { ROOT_URL } from "../../../config";
+import { LANGUAGES_URL } from "../../../config";
 
 export default function LanguageFilter() {
 
     const [languages, setLanguages] = useState([])
 
     useEffect(() => {
-        fetch(ROOT_URL + "/languages")
+        fetch(LANGUAGES_URL)
         .then(r => r.json())
         .then(data => setLanguages(data))
     }, [])
