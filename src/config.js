@@ -11,6 +11,7 @@ const SHOPS_URL = ROOT_URL + "/shops";
 const DETAILS_URL = ROOT_URL + "/shopdetails/"; // + id
 const DESTINATIONS_URL = ROOT_URL + "/destinations";
 const LANGUAGES_URL = ROOT_URL + "/languages";
+const POST_URL = ROOT_URL + "/post";
 
 export { 
     GOOGLE_API_KEY,
@@ -19,5 +20,6 @@ export {
     SHOPS_URL,
     DETAILS_URL,
     DESTINATIONS_URL,
-    LANGUAGES_URL
+    LANGUAGES_URL,
+    POST_URL
  }
