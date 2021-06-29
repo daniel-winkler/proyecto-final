@@ -9,6 +9,7 @@ import ShopPage from "../pages/ShopPage";
 import ErrorPage from "../pages/ErrorPage";
 import DestinationsPage from "../pages/DestinationsPage";
 import SearchPage from "../pages/SearchPage";
+import Post from "./Post";
 
 
 export default function Router() {
@@ -25,6 +26,7 @@ export default function Router() {
                         <Route path="/login" component={LoginPage} />
                         <Route path="/register" component={RegisterPage} />
                         <Route path="/destinations" component={DestinationsPage} />
+                        <Route path="/post" component={Post} />
                         <Route component={ErrorPage} />
                     </Switch>
                 </BrowserRouter>

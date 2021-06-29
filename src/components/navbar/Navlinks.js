@@ -7,7 +7,7 @@ export default function NavLinks() {
             <NavLink to="/search" activeClassName="active">Search</NavLink>
             <NavLink to="/destinations" activeClassName="active">Destinations</NavLink>
             <NavLink to="/logbook" activeClassName="active">Logbook</NavLink>
-            <NavLink to="/postshop" activeClassName="active">Post your shop!</NavLink>
+            <NavLink to="/post" activeClassName="active">Post your shop!</NavLink>
         </>
     )
 }

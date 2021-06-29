@@ -26,7 +26,7 @@ export default function Register() {
 
     return (
         <div className="registercomponent">
-            <form onSubmit={handleSubmit} className="registerform">
+            <form onSubmit={handleSubmit} className="registerform diveform">
 
                 <h4>Register for a new account</h4>
                 
