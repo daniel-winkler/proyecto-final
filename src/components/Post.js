@@ -13,7 +13,7 @@ export default function Post() {
         .then(data => setLanguages(data))
     }, [])
 
-    const formInitialState = {shopname: "", shoplocation: "", shoplanguages: ""};
+    const formInitialState = {shopname: "", shoplocation: ""};
     const [form, handleInputChange] = useForm(formInitialState);
 
     async function handleSubmit(e){
@@ -48,6 +48,7 @@ export default function Post() {
                         )
                     })}
                 </select>
+                {/* TODO: crear multiples selecciones de idiomas y enviarlas como array  */}
 
                 <button type="submit">Submit your shop!</button>
 
