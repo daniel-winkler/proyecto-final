@@ -19,6 +19,8 @@ export default function Post() {
     async function handleSubmit(e){
         e.preventDefault();
 
+        console.log(form);
+
         const options = {
             method: "POST",
             headers: {"Content-Type": "application/json"},
@@ -39,17 +41,26 @@ export default function Post() {
                 <label htmlFor="shoplocation">Location:</label>
                 <input onChange={handleInputChange} value={form.shoplocation} type="text" name="shoplocation" id="shoplocation" required/>
                 <label htmlFor="shoplanguage">Spoken languages:</label>
-                {/* <input onChange={handleInputChange} value={form.shoplanguage} type="text" name="shoplanguage" id="shoplanguage" required/> */}
-                <select onChange={handleInputChange} name="shoplanguages" id="shoplanguage">
+                {/* <select onChange={handleInputChange} name="shoplanguages" id="shoplanguage">
                     <option value="" hidden></option>
                     {languages.map(language => {
                         return(
                             <option key={language.id} value={language.countrycode}>{language.name}</option>
                         )
                     })}
-                </select>
+                </select> */}
+                <div>
+                    {languages.map(language => {
+                    return ( 
+                        <span key={language.id}>
+                            <input onChange={handleInputChange} value={language.countrycode} type="checkbox" name="shoplanguage" id={language.countrycode} /><label htmlFor={language.countrycode}>{language.name}</label>
+                        </span>
+                    )
+                    })}
+                </div>
                 {/* TODO: crear multiples selecciones de idiomas y enviarlas como array  */}
                 {/* TODO: Google Maps clickable que recoja coordenadas */}
+                {/* https://stackoverflow.com/questions/58869132/react-select-multi-select-custom-way-to-display-multiple-options */}
 
                 <button type="submit">Submit your shop!</button>
 

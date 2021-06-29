@@ -20,6 +20,8 @@ export default function Map({latitude, longitude}) {
 
     // https://developers.google.com/maps/documentation/javascript/examples/event-click-latlng#maps_event_click_latlng-javascript
 
+    // https://stackoverflow.com/questions/65399542/react-google-maps-api-how-to-search-current-location-for-a-search-result
+
     return (
         <div onClick={(e) => getInfo(e)}>
             <LoadScript googleMapsApiKey={GOOGLE_API_KEY}>
