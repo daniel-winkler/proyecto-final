@@ -14,7 +14,7 @@ export default function SearchPage() {
     }, [])
 
     return (
-        <div className="searchpage">
+        <div className="searchpage backgroundimg">
             <Filter />
             <div className="cardgrid">
                 {search.map(shop => {

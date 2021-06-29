@@ -14,6 +14,16 @@
   margin: 10px;
 }
 
+.backgroundimg {
+  background-color: var(--diveblue);
+  background-image: url("images/index.png");
+  background-blend-mode: luminosity;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+}
+
 /* END GLOBAL CLASSES  */
 
 /* START BUTTON  */
@@ -84,6 +94,7 @@ button:hover {
 .header {
   height: 100px;
   background-color: var(--diveblue);
+  /* background-image: url("images/header.jpg"); */
   color: var(--divewhite);
   margin: 0;
   display: flex;
@@ -92,6 +103,11 @@ button:hover {
 }
 
 /* END HEADER  */
+
+/* START INDEX PAGE  */
+
+
+/* END INDEX PAGE  */
 
 /* START LOGIN PAGE  */
 

@@ -49,6 +49,7 @@ export default function Post() {
                     })}
                 </select>
                 {/* TODO: crear multiples selecciones de idiomas y enviarlas como array  */}
+                {/* TODO: Google Maps clickable que recoja coordenadas */}
 
                 <button type="submit">Submit your shop!</button>
 
