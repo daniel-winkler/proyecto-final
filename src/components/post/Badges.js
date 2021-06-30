@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { LANGUAGES_URL } from '../../config';
 
-export default function Badges({setLanguageArray}) {
+export default function Badges({badges, setBadges}) {
 
     const [languages, setLanguages] = useState([])
 
@@ -12,18 +12,14 @@ export default function Badges({setLanguageArray}) {
         .then(data => setLanguages(data))
     }, [])
 
-    let [badges, setBadges] = useState([])
-
     function addBadge (e){
         const language = languages.filter(lang => e.target.value === lang.countrycode)[0]
         if(!badges.includes(language)){
             setBadges([...badges, language])
         }
-        console.log(badges);
     }
   
     function removeBadge(e){
-        console.log(e.target);
       setBadges(
         badges.filter(badge => badge.name !== e.target.textContent)
       )
