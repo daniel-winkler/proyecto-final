@@ -13,12 +13,16 @@ export default function LanguageFilter() {
         .then(data => setLanguages(data))
     }, [])
 
+    function handleChange(e){
+        console.log(e.target.name);
+    }
+
     return (
         <Collapsible trigger="Language">
             {languages.map(language => {
                 return ( 
                     <div key={language.id} className="checkboxblock">
-                        <input type="checkbox" name="" id={language.countrycode} /><label htmlFor={language.countrycode}>{language.name}</label>
+                        <input onChange={(e)=>handleChange(e)} type="checkbox" name={language.countrycode} id={language.countrycode} /><label htmlFor={language.countrycode}>{language.name}</label>
                     </div>
                 )
             })}
