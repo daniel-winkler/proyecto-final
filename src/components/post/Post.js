@@ -30,7 +30,7 @@ export default function Post() {
 
     return (
         <div>
-            <form onSubmit={handleSubmit} method="POST" className="postform diveform">
+            <form onSubmit={handleSubmit} method="POST" className="postform divebox">
                 <h4>Post you shop here!</h4>
                 <label htmlFor="shopname">Name:</label>
                 <input onChange={handleInputChange} value={form.shopname} type="text" name="shopname" id="shopname" required/>

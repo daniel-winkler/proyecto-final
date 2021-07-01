@@ -31,7 +31,7 @@ export default function Login() {
 
     return (
         <div className="logincomponent">
-            <div className="loginform diveform">
+            <div className="loginform divebox">
                 <h3>Registered customers</h3>
                 <form onSubmit={handleSubmit}>
                     <div>
@@ -47,7 +47,7 @@ export default function Login() {
                     </div>
                 </form>
             </div>
-            <div className="newaccount diveform">
+            <div className="newaccount divebox">
                 <h3>New customers</h3>
                 <button onClick={handleRegister}>Create an account</button>
             </div>

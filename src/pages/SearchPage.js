@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Card from '../components/searchpage/Card';
 import { SHOPS_URL } from "../config";
 import Filter from "../components/searchpage/Filter";
+import Searchbar from '../components/searchpage/Searchbar';
 
 export default function SearchPage() {
 
@@ -16,10 +17,13 @@ export default function SearchPage() {
     return (
         <div className="searchpage backgroundimg">
             <Filter />
-            <div className="cardgrid">
-                {search.map(shop => {
-                    return ( <Card key={shop.id} shop={shop} /> )
-                })}
+            <div className="searchmain">
+                <Searchbar />
+                <div className="cardgrid">
+                    {search.map(shop => {
+                        return ( <Card key={shop.id} shop={shop} /> )
+                    })}
+                </div>
             </div>
         </div>
     )
