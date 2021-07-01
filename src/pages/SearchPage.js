@@ -7,18 +7,19 @@ import Searchbar from '../components/searchpage/Searchbar';
 export default function SearchPage() {
 
     const [search, setSearch] = useState([])
+    const [input, setInput] = useState("")
 
     useEffect(() => {
-        fetch(SHOPS_URL)
+        fetch(SHOPS_URL + input)
         .then(r => r.json())
         .then(data => setSearch(data))
-    }, [])
+    }, [input])
 
     return (
         <div className="searchpage backgroundimg">
             <Filter />
             <div className="searchmain">
-                <Searchbar />
+                <Searchbar setInput={setInput} />
                 <div className="cardgrid">
                     {search.map(shop => {
                         return ( <Card key={shop.id} shop={shop} /> )

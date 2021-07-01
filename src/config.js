@@ -7,7 +7,7 @@ const REGISTER_URL = ROOT_URL + "/register";
 const LOGIN_URL = ROOT_URL + "/api/login_check";
 
 // APIs
-const SHOPS_URL = ROOT_URL + "/shops";
+const SHOPS_URL = ROOT_URL + "/shops?term=";
 const DETAILS_URL = ROOT_URL + "/shopdetails/"; // + id
 const DESTINATIONS_URL = ROOT_URL + "/destinations";
 const LANGUAGES_URL = ROOT_URL + "/languages";
