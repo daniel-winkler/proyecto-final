@@ -3,10 +3,10 @@
   --divelightblue: #93c6d6; /* Active color, Hover */
   --diveboxbg: #f0f4f7; /* Text box background */
   --divewhite: #f5f5f5; /* Text color */
-  --diveremove: #8c001a; /* Remove color */
+  --diveremove: #c22240; /* Remove color */
 }
 
-/* START GLOBAL CLASSES  */
+/* START GLOBAL CLASSES & ELEMENTS  */
 
 .diveform {
   background-color: var(--diveboxbg);
@@ -25,10 +25,6 @@
   /* height: 100vh; */
 }
 
-/* END GLOBAL CLASSES  */
-
-/* START BUTTON  */
-
 button {
   border: solid 1px grey;
   border-radius: 5px;
@@ -43,7 +39,7 @@ button:hover {
   transition: 0.2s;
 } 
 
-/* END BUTTON  */
+/* END GLOBAL CLASSES & ELEMENTS  */
 
 /* START NAVBAR  */
 
@@ -71,7 +67,7 @@ button:hover {
 }
 
 .navbar a:hover {
-  border-bottom: solid 3px var(--divelightblue) ;
+  border-bottom: solid 3px var(--divelightblue);
 }
 
 .active {
