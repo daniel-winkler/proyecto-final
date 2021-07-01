@@ -4,12 +4,14 @@
   --diveboxbg: #f0f4f7; /* Text box background */
   --divewhite: #f5f5f5; /* Text color */
   --diveremove: #c22240; /* Remove color */
+  --divegrey: #adb5bd; /* Border color */
 }
 
 /* START GLOBAL CLASSES & ELEMENTS  */
 
-.diveform {
+.divebox {
   background-color: var(--diveboxbg);
+  border: 1px solid var(--divegrey);
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
@@ -26,8 +28,9 @@
 }
 
 button {
-  border: solid 1px grey;
+  border: solid 1px var(--divegrey);
   border-radius: 5px;
+  padding: 3px;
   font-size: large;
   background-color: var(--diveblue);
   color: var(--divewhite);
@@ -37,7 +40,13 @@ button {
 button:hover {
   background-color: var(--divelightblue);
   transition: 0.2s;
-} 
+}
+
+input {
+  border: solid 1px var(--divegrey);
+  border-radius: 8px;
+  padding: 8px;
+}
 
 /* END GLOBAL CLASSES & ELEMENTS  */
 
@@ -128,10 +137,7 @@ button:hover {
 
 .loginform input {
   display: block;
-  border: solid 1px grey;
-  border-radius: 5px;
   margin-top: 5px;
-  height: 25px;
   width: 75%;
 }
 
@@ -179,11 +185,8 @@ button:hover {
 .registerform input,
 .registerform select {
   display: block;
-  border: solid 1px grey;
-  border-radius: 5px;
   margin-top: 5px;
   margin-bottom: 10px; /* different from login form */
-  height: 25px;
   width: 75%;
 }
 
@@ -191,9 +194,17 @@ button:hover {
 
 /* START SEARCH PAGE  */
 
-.searchpage {
+.searchpage,
+.searchmain {
   display: flex;
   flex-direction: column;
+}
+
+.searchbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--divewhite);
 }
 
 .card {
@@ -303,6 +314,10 @@ button:hover {
 
   .searchpage {
     flex-direction: row;
+  }
+
+  .searchmain {
+    flex-grow: 1;
   }
 
   .cardgrid {
