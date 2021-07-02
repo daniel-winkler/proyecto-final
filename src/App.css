@@ -245,11 +245,15 @@ select {
 }
 
 .filterbox {
-  flex-grow: 0;
+  height: 0%;
   background-color: var(--divewhite);
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
+}
+
+.filterbox button {
+  margin-top: 10px;
 }
 
 .Collapsible *:hover {
