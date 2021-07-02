@@ -14,7 +14,7 @@ import PostPage from "../pages/PostPage";
 
 export default function Router() {
     return (
-        <div className="pagecontainer">
+        <div className="pagecontainer backgroundimg">
             <div className="contentwrap">
                 <BrowserRouter>
                     <Navbar />

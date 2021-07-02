@@ -16,7 +16,7 @@ export default function SearchPage() {
     }, [input])
 
     return (
-        <div className="searchpage backgroundimg">
+        <div className="searchpage">
             <Filter />
             <div className="searchmain">
                 <Searchbar setInput={setInput} />
