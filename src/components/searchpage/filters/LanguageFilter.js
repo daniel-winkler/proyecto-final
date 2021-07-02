@@ -3,7 +3,7 @@ import React from 'react';
 import Collapsible from 'react-collapsible'; // https://www.npmjs.com/package/react-collapsible
 import { LANGUAGES_URL } from "../../../config";
 
-export default function LanguageFilter() {
+export default function LanguageFilter({setChecked, checked}) {
 
     const [languages, setLanguages] = useState([])
 
@@ -14,7 +14,12 @@ export default function LanguageFilter() {
     }, [])
 
     function handleChange(e){
-        console.log(e.target.name);
+        console.log(e.target);
+        if(e.target.checked){
+            const newChecked = {id: e.target.id}
+            setChecked([...checked, newChecked])
+            console.log(checked);
+        }
     }
 
     return (
