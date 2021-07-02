@@ -26,6 +26,15 @@
   background-repeat: no-repeat;
 }
 
+.inputblock {
+  margin-bottom: 15px;
+}
+
+.inputblock input,
+.inputblock select {
+  margin-left: 5px;
+}
+
 button {
   border: solid 1px var(--divegrey);
   border-radius: 5px;
@@ -41,7 +50,8 @@ button:hover {
   transition: 0.2s;
 }
 
-input {
+input,
+select {
   border: solid 1px var(--divegrey);
   border-radius: 8px;
   padding: 8px;
@@ -145,16 +155,16 @@ input {
 /* START POST SHOP PAGE  */
 
 .badges {
-  height: 50px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .badges > span {
-  flex-grow: 0;
   padding: 10px;
   background-color: var(--divelightblue);
   margin-right: 10px;
+  margin-top: 10px;
   border-radius: 10px;
 }
 

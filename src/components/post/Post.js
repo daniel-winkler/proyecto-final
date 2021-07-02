@@ -32,16 +32,20 @@ export default function Post() {
         <div>
             <form onSubmit={handleSubmit} method="POST" className="postform divebox">
                 <h4>Post you shop here!</h4>
-                <label htmlFor="shopname">Name:</label>
-                <input onChange={handleInputChange} value={form.shopname} type="text" name="shopname" id="shopname" required/>
-                <label htmlFor="shoplocation">Location:</label>
-                <input onChange={handleInputChange} value={form.shoplocation} type="text" name="shoplocation" id="shoplocation" required/>
-                
-                <Destinations setDestination={setDestination} />
-                <Badges badges={badges} setBadges={setBadges} />
+                <div className="inputblock">
+                    <label htmlFor="shopname">Name:</label>
+                    <input onChange={handleInputChange} value={form.shopname} type="text" name="shopname" id="shopname" required/>
+                </div>
+                <div className="inputblock">
+                    <label htmlFor="shoplocation">Location:</label>
+                    <input onChange={handleInputChange} value={form.shoplocation} type="text" name="shoplocation" id="shoplocation" required/>
+                    <Destinations setDestination={setDestination} />
+                </div>
+                <div className="inputblock">
+                    <Badges badges={badges} setBadges={setBadges} />
+                </div>
 
                 {/* TODO: Google Maps clickable que recoja coordenadas */}
-                {/* https://stackoverflow.com/questions/58869132/react-select-multi-select-custom-way-to-display-multiple-options */}
 
                 <button type="submit">Submit your shop!</button>
 
