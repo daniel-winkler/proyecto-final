@@ -3,6 +3,7 @@ import Card from '../components/searchpage/Card';
 import { SHOPS_URL } from "../config";
 import Filter from "../components/searchpage/Filter";
 import Searchbar from '../components/searchpage/Searchbar';
+import NothingFound from '../components/searchpage/NothingFound';
 
 export default function SearchPage() {
 
@@ -21,7 +22,7 @@ export default function SearchPage() {
             <div className="searchmain">
                 <Searchbar setInput={setInput} />
                 {/* TODO: crear cortocircuito si la busqueda devuelve 0 resultados  */}
-                {search.length === 0}
+                {search.length === 0 && <NothingFound/>}
                 <div className="cardgrid">
                     {search.map(shop => {
                         return ( <Card key={shop.id} shop={shop} /> )

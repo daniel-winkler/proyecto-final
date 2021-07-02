@@ -28,6 +28,14 @@ export default function Post() {
         const data = await response.json();
     }
 
+    function show(e){
+        console.log(e.target.files);
+        // TODO: enviar imagenes al servidor (componente React)
+        // https://www.raymondcamden.com/2016/05/10/uploading-multiple-files-at-once-with-fetch
+        // https://www.npmjs.com/package/react-file-utils
+        // https://stackoverflow.com/questions/59451364/multiple-file-upload-with-reactjs
+    }
+
     return (
         <div>
             <form onSubmit={handleSubmit} method="POST" className="postform divebox">
@@ -43,6 +51,9 @@ export default function Post() {
                 </div>
                 <div className="inputblock">
                     <Badges badges={badges} setBadges={setBadges} />
+                </div>
+                <div className="inputblock">
+                    <input onClick={(e)=>show(e)} type="file" name="pictures" accept="image/png, image/jpeg, image/jpg" multiple="multiple" />
                 </div>
 
                 {/* TODO: Google Maps clickable que recoja coordenadas */}
