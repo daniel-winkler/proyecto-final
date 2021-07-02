@@ -24,7 +24,6 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /* height: 100vh; */
 }
 
 button {
@@ -54,12 +53,13 @@ input {
 
 .navbar {
   background-color: var(--diveblue);
-  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .navbar a,
@@ -101,7 +101,6 @@ input {
 .header {
   height: 100px;
   background-color: var(--diveblue);
-  /* background-image: url("images/header.jpg"); */
   color: var(--divewhite);
   margin: 0;
   display: flex;
@@ -220,12 +219,14 @@ input {
 }
 
 .cardgrid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(12, 1fr);
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(12, 1fr); */
 }
 
 .filterbox {
+  flex-grow: 0;
   background-color: var(--divewhite);
   padding: 10px;
   margin: 10px;
@@ -322,6 +323,7 @@ input {
 
   .cardgrid {
     flex-grow: 1;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
   }
