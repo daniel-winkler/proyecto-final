@@ -21,7 +21,6 @@ export default function SearchPage() {
             <Filter />
             <div className="searchmain">
                 <Searchbar setInput={setInput} />
-                {/* TODO: crear cortocircuito si la busqueda devuelve 0 resultados  */}
                 {search.length === 0 && <NothingFound/>}
                 <div className="cardgrid">
                     {search.map(shop => {
