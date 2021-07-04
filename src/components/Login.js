@@ -2,9 +2,12 @@ import React from 'react'
 import { useHistory } from "react-router-dom";
 import { useForm } from '../hooks/useForm';
 import { LOGIN_URL } from '../config';
+import { useAuthContext } from '../contexts/AuthContext';
 
 
 export default function Login() {
+
+    const { signIn } = useAuthContext();
 
     const history = useHistory();
 
@@ -26,7 +29,13 @@ export default function Login() {
 
         const response = await fetch(LOGIN_URL, options);
         const data = await response.json();
-        console.log(data.token);
+
+        if(response.status === 200){
+            signIn(data.token, form.username)
+            alert("You are logged in!")
+        } else {
+            alert("Invalid credentials")
+        }
     }
 
     return (
