@@ -31,7 +31,9 @@ export default function Router() {
                     </Switch>
                 </BrowserRouter>
             </div>
-            <Footer />
+            {/* Footer dentro de pagecontainer y al mismo nivel que contentwrap para que tenga la posicion adecuada
+            independientemente del contenido de la pagina (más detalles en el CSS) */}
+            <Footer /> 
         </div>
     )
 }
