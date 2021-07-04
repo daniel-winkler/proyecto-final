@@ -23,12 +23,12 @@ export default function LanguageFilter({setChecked, checked}) {
     }
 
     return (
-        <Collapsible trigger="Language">
+        <Collapsible trigger="Language" triggerTagName="ul">
             {languages.map(language => {
                 return ( 
-                    <div key={language.id} className="checkboxblock">
+                    <li key={language.id} className="checkboxblock">
                         <input onChange={(e)=>handleChange(e)} type="checkbox" name={language.countrycode} id={language.countrycode} /><label htmlFor={language.countrycode}>{language.name}</label>
-                    </div>
+                    </li>
                 )
             })}
         </Collapsible>

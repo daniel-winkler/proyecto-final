@@ -14,12 +14,12 @@ export default function DestinationFilter() {
     }, [])
 
     return (
-        <Collapsible trigger="Destination">
+        <Collapsible trigger="Destination" triggerTagName="ul">
             {destinations.map(destination => {
                 return(
-                    <div key={destination.id} className="checkboxblock">
+                    <li key={destination.id} className="checkboxblock">
                         <input type="checkbox" name="" id={destination.id} /><label htmlFor={destination.id}>{destination.name}</label>
-                    </div>
+                    </li>
                 )
             })}
         </Collapsible>

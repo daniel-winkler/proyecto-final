@@ -260,8 +260,8 @@ select {
   cursor: pointer;
 }
 
-.Collapsible span {
-  display: block;
+.Collapsible ul {
+  padding-left: 0px;
   margin: 5px;
   font-weight: 500;
 }
