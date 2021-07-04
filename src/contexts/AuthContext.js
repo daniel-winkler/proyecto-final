@@ -38,7 +38,7 @@ export default function AuthContext({children}) {
         };
 
         // si ni siquiera hay token guardado, no hacemos la petición
-        getToken() && fetch(LOGIN_URL, options)
+        getToken() && fetch("http://localhost:8000/api", options) // TODO: URL para comprobar la Authentificacion???
             .then(response => {
                 if (!response.ok) {
                     throw new Error(response.statusText);
@@ -47,7 +47,8 @@ export default function AuthContext({children}) {
             })
             .then(data => signIn(data.token, data.user)) // Token e info renovada
             .catch(() => signOut()); // Limpiamos la sesión
-        
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         }, []);
 
     const contextValue = {
