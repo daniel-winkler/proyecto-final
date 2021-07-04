@@ -1,10 +1,13 @@
 import './App.css';
-import Router from './components/Router';
+import AuthContext from './contexts/AuthContext';
+import Router from './routers/Router';
 
 function App() {
   return (
     <div className="App">
-      <Router />
+      <AuthContext>
+        <Router />
+      </AuthContext>
     </div>
   );
 }

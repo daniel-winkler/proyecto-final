@@ -1,7 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Navbar from "./navbar/Navbar";
-import Header from "./Header";
-import Footer from "./Footer";
+import Navbar from "../components/navbar/Navbar";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import IndexPage from "../pages/IndexPage";
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";

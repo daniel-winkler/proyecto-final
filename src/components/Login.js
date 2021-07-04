@@ -26,7 +26,7 @@ export default function Login() {
 
         const response = await fetch(LOGIN_URL, options);
         const data = await response.json();
-        console.log(data);
+        console.log(data.token);
     }
 
     return (
