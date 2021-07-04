@@ -26,6 +26,10 @@ export default function Post() {
 
         const response = await fetch(POST_URL, options);
         const data = await response.json();
+
+        if (response.status === 200){
+            alert("Shop has been posted successfully!")
+        }
     }
 
     function show(e){
