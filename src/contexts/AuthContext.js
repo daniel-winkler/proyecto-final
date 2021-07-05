@@ -32,7 +32,7 @@ export default function AuthContext({children}) {
     };
 
     useEffect(() => {
-        
+        // Recuperar la sesión y comprobar su validez
         const options = {
             headers: getAuthHeaders()
         };
