@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import { LANGUAGES_URL } from '../../config';
+import { countryCodeEmoji } from 'country-code-emoji';
 
 export default function Badges({badges, setBadges}) {
 
@@ -20,8 +21,9 @@ export default function Badges({badges, setBadges}) {
     }
   
     function removeBadge(e){
+        console.log(e.target);
       setBadges(
-        badges.filter(badge => badge.name !== e.target.textContent)
+        badges.filter(badge => badge.name !== e.target.innerText.split(' ')[0])
       )
     }
 
@@ -38,7 +40,7 @@ export default function Badges({badges, setBadges}) {
             </select>
             <div className="badges">
                 {badges.map(badge => {
-                    return(<span key={badge.id} onClick={(e)=>removeBadge(e)}>{badge.name}</span>)
+                    return(<span key={badge.id} onClick={(e)=>removeBadge(e)}>{badge.name} {countryCodeEmoji(badge.countrycode)}</span>)
                 })}
             </div>
         </div>
