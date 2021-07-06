@@ -18,7 +18,7 @@ export default function DestinationFilter() {
             {destinations.map(destination => {
                 return(
                     <li key={destination.id} className="checkboxblock">
-                        <input type="checkbox" name="" id={destination.id} /><label htmlFor={destination.id}>{destination.name}</label>
+                        <input type="radio" name="destination" id={destination.id} /><label htmlFor={destination.id}>{destination.name}</label>
                     </li>
                 )
             })}
