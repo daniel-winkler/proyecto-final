@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import Navlinks from "./Navlinks";
 import Collapsible from "react-collapsible"; // https://www.npmjs.com/package/react-collapsible
 import { useAuthContext } from "../../contexts/AuthContext";

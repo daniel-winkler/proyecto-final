@@ -4,10 +4,12 @@ import { useForm } from '../../hooks/useForm'
 import { POST_URL } from '../../config';
 import Badges from './Badges';
 import Destinations from './Destinations';
+import Images from "./Images"
 
 export default function Post() {
 
-    let [badges, setBadges] = useState([])
+    const [badges, setBadges] = useState([])
+    const [images, setImages] = useState([]);
 
     const [destination, setDestination] = useState({})
 
@@ -16,12 +18,12 @@ export default function Post() {
 
     async function handleSubmit(e){
         e.preventDefault();
-        console.log({...form, badges, destination});
+        console.log({...form, badges, destination, images });
 
         const options = {
             method: "POST",
             headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({...form, badges, destination})
+            body: JSON.stringify({...form, badges, destination, images})
         }
 
         const response = await fetch(POST_URL, options);
@@ -32,13 +34,14 @@ export default function Post() {
         }
     }
 
-    function show(e){
-        console.log(e.target.files);
-        // TODO: enviar imagenes al servidor (componente React)
-        // https://www.raymondcamden.com/2016/05/10/uploading-multiple-files-at-once-with-fetch
-        // https://www.npmjs.com/package/react-file-utils
-        // https://stackoverflow.com/questions/59451364/multiple-file-upload-with-reactjs
-    }
+    // const getFiles = e => {
+    //     setImages(e.target.files[0])
+    //     console.log(images);
+    // }
+        
+    //SOLUCIONES
+    //https://www.npmjs.com/package/react-images-uploading
+    // https://medium.com/swlh/integrating-an-image-upload-system-into-a-react-app-with-node-js-express-js-and-multer-d5ab5c4d1da8
 
     return (
         <div>
@@ -56,10 +59,10 @@ export default function Post() {
                 <div className="inputblock">
                     <Badges badges={badges} setBadges={setBadges} />
                 </div>
-                <div className="inputblock">
-                    <input onClick={(e)=>show(e)} type="file" name="pictures" accept="image/png, image/jpeg, image/jpg" multiple="multiple" />
-                </div>
-
+                {/* <div className="inputblock">
+                    <input onChange={(e)=>getFiles(e)} type="file" name="pictures" accept="image/png, image/jpeg, image/jpg" />
+                </div> */}
+                <Images images={images} setImages={setImages} />
                 {/* TODO: Google Maps clickable que recoja coordenadas */}
 
                 <button type="submit">Submit your shop!</button>
