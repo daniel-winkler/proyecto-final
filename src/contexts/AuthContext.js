@@ -1,5 +1,5 @@
 import { createContext, useState, useContext, useEffect } from "react";
-import { LOGIN_URL } from "../config";
+import { CHECK_TOKEN_URL } from "../config";
 
 const LoginContext = createContext(null);
 
@@ -38,14 +38,14 @@ export default function AuthContext({children}) {
         };
 
         // si ni siquiera hay token guardado, no hacemos la petición
-        getToken() && fetch("http://localhost:8000/api", options) // TODO: URL para comprobar la Authentificacion???
+        getToken() && fetch(CHECK_TOKEN_URL, options) // TODO: URL para comprobar la Authentificacion???
             .then(response => {
                 if (!response.ok) {
                     throw new Error(response.statusText);
                 }
                 return response.json();
             })
-            .then(data => signIn(data.token, data.user)) // Token e info renovada
+            .then(data => signIn(data.token, data.user)) // Token e info renovada // TODO: argumentos signIn por actualizar (user info)
             .catch(() => signOut()); // Limpiamos la sesión
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
