@@ -77,19 +77,22 @@ select {
 }
 
 .navbar a,
+.logout,
 .hamburger {
   color: var(--divewhite);
   text-decoration: none;
   margin-left: 5px;
   margin-right: 5px;
   padding: 5px;
+  cursor: pointer;
 }
 
 .hamburger a {
   display: block;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.logout:hover {
   border-bottom: solid 3px var(--divelightblue);
 }
 

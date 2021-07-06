@@ -1,8 +1,14 @@
 import { NavLink } from "react-router-dom";
 import Navlinks from "./Navlinks";
 import Collapsible from "react-collapsible"; // https://www.npmjs.com/package/react-collapsible
+import { useAuthContext } from "../../contexts/AuthContext";
+import LoginButton from "./LoginButton";
+import LogoutButton from "./LogoutButton";
 
 export default function Navbar() {
+
+    const { isAuthenticated } = useAuthContext();
+
     return (
         <div>
             <nav className="navbar">
@@ -15,10 +21,7 @@ export default function Navbar() {
                         <Navlinks/>
                     </div>
                     <div className="navlogin">
-                        <NavLink to="/login">
-                            <i className="fas fa-user fa-lg"></i>
-                            <span>Login / Register</span>
-                        </NavLink>
+                        {isAuthenticated ? <LogoutButton/> : <LoginButton/>}
                     </div>
                 </nav>
         </div>
