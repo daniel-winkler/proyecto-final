@@ -16,7 +16,7 @@ export default function Filter() {
         <aside className="filterbox">
             <h3>Filter By:</h3>
             <LanguageFilter checked={checked} setChecked={setChecked}/>
-            <DestinationFilter checked={checked} setChecked={setChecked}/>
+            <DestinationFilter />
             <button onClick={clearAll}>Clear all</button>
         </aside>
     )

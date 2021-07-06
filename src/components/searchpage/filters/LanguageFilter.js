@@ -14,11 +14,10 @@ export default function LanguageFilter({setChecked, checked}) {
     }, [])
 
     function handleChange(e){
-        console.log(e.target);
-        if(e.target.checked){
-            const newChecked = {id: e.target.id}
-            setChecked([...checked, newChecked])
-            console.log(checked);
+        if(e.target.checked && !checked.includes(e.target.id)){
+            setChecked([...checked, e.target.id])
+        } else {
+            setChecked(checked.filter(check => check !== e.target.id))
         }
     }
 
