@@ -43,7 +43,7 @@ export default function Shop() {
             </div> */}
             <div className="shop">
                 <h4>Location</h4>
-                <Map latitude="-28.882304674138656" longitude="143.3486875" />
+                <Map latitude={shop.coords?.lat} longitude={shop.coords?.lng} />
             </div>
             <Contactform />
         </>
