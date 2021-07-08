@@ -14,20 +14,15 @@ export default function Map({latitude, longitude}) {
         lng: Number(longitude)
     };
 
-    function getInfo(e){
-        console.log(e.target);
-    }
-
     // https://developers.google.com/maps/documentation/javascript/examples/event-click-latlng#maps_event_click_latlng-javascript
 
     // https://stackoverflow.com/questions/65399542/react-google-maps-api-how-to-search-current-location-for-a-search-result
 
     return (
-        <div onClick={(e) => getInfo(e)}>
+        <div>
             <LoadScript googleMapsApiKey={GOOGLE_API_KEY}>
-                <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={15}>
-                    { /* Child components, such as markers, info windows, etc. */ }
-                    <Marker position={center} />
+                <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={15} >
+                    <Marker position={center} /> { /* Child components, such as markers, info windows, etc. */ }
                 </GoogleMap>
             </LoadScript>
         </div>

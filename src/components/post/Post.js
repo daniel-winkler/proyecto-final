@@ -5,6 +5,7 @@ import { POST_URL } from '../../config';
 import Badges from './Badges';
 import Destinations from './Destinations';
 import Images from "./Images"
+import MapInput from "./MapInput"
 
 export default function Post() {
 
@@ -12,6 +13,9 @@ export default function Post() {
     const [images, setImages] = useState([]);
 
     const [destination, setDestination] = useState({})
+
+    const initialCoords = {lat: 36.72043887896444, lng: -4.372293729292253};
+    const [coords, setCoords] = useState(initialCoords)
 
     const formInitialState = {shopname: "", shoplocation: ""};
     const [form, handleInputChange] = useForm(formInitialState);
@@ -28,6 +32,7 @@ export default function Post() {
 
         const response = await fetch(POST_URL, options);
         const data = await response.json();
+        console.log(data);
 
         if (response.status === 200){
             alert("Shop has been posted successfully!")
@@ -62,8 +67,9 @@ export default function Post() {
                 {/* <div className="inputblock">
                     <input onChange={(e)=>getFiles(e)} type="file" name="pictures" accept="image/png, image/jpeg, image/jpg" />
                 </div> */}
+
                 <Images images={images} setImages={setImages} />
-                {/* TODO: Google Maps clickable que recoja coordenadas */}
+                <MapInput coords={coords} setCoords={setCoords} />
 
                 <button type="submit">Submit your shop!</button>
 
