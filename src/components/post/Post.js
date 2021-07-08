@@ -22,12 +22,12 @@ export default function Post() {
 
     async function handleSubmit(e){
         e.preventDefault();
-        console.log({...form, badges, destination, images });
+        console.log({...form, badges, destination, coords});
 
         const options = {
             method: "POST",
             headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({...form, badges, destination, images})
+            body: JSON.stringify({...form, badges, destination, coords})
         }
 
         const response = await fetch(POST_URL, options);
