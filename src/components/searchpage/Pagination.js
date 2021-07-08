@@ -1,10 +1,7 @@
 import React from 'react';
 import ReactPaginate from 'react-paginate'; // https://github.com/AdeleD/react-paginate
-// import { useState } from 'react';
 
 export default function Pagination({totalPages, input, setPage}) {
-
-    // const [activePage, setActivePage] = useState(1);
 
     function handlePageClick(e){
         let currentPage = e.selected + 1;
@@ -15,18 +12,16 @@ export default function Pagination({totalPages, input, setPage}) {
         }
     }
 
-    // TODO: sincronizar ambos paginadores
-
     return (
         <>
             <ReactPaginate
-            previousLabel={'Previous'}
-            nextLabel={'Next'}
+            previousLabel={'<'}
+            nextLabel={'>'}
             breakLabel={'...'}
             breakClassName={'break-me'}
             pageCount={totalPages}
             marginPagesDisplayed={2}
-            pageRangeDisplayed={5}
+            pageRangeDisplayed={3}
             onPageChange={(e)=>handlePageClick(e)}
             containerClassName={'pagination'}
             activeClassName={'active'}

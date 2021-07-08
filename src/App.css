@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth; /*  */
+}
+
 :root {
   --diveblue: #20445E; /* Main color */
   --divelightblue: #93c6d6; /* Active color, Hover */
@@ -81,8 +85,7 @@ select {
 .hamburger {
   color: var(--divewhite);
   text-decoration: none;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-inline: 5px;
   padding: 5px;
   cursor: pointer;
 }
@@ -269,25 +272,35 @@ select {
 }
 
 .pagination {
+  flex-shrink: 2;
+  align-self: center;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   background-color: var(--diveboxbg);
   border-radius: 10px;
   height: 50px;
   margin: 5px;
+  padding-left: 0px;
 }
 
 .pagination li {
   list-style: none;
   padding: 8px;
+  margin-inline: 1px;
+  border: solid 3px var(--diveboxbg);
+  border-radius: 10px;
 }
 
 .pagination li:hover{
   cursor: pointer;
-  border: solid 3px var(--divelightblue);
-  border-radius: 10px;
+  border-color: var(--divelightblue);
 }
+
+.goup {
+  align-self: flex-end;
+}
+
 
 /* END SEARCH PAGE  */
 
