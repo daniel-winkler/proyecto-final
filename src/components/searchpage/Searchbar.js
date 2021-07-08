@@ -1,8 +1,9 @@
 import React from 'react'
 
-export default function Searchbar({setInput}) {
+export default function Searchbar({setInput, setPage}) {
 
     function handleSearch(e){
+        setPage("")
         if (e.target.value !== ""){
             setInput(`?term=${e.target.value}`)
         } else {
