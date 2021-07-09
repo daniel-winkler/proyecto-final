@@ -22,7 +22,11 @@ export default function Map({latitude, longitude}) {
         <div>
             <LoadScript googleMapsApiKey={GOOGLE_API_KEY}>
                 <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={15} >
-                    <Marker position={center} /> { /* Child components, such as markers, info windows, etc. */ }
+                    <Marker
+                    onClick={() => {
+                        window.open(`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`, "_blank");
+                    }}
+                    position={center} /> { /* Child components, such as markers, info windows, etc. */ }
                 </GoogleMap>
             </LoadScript>
         </div>
