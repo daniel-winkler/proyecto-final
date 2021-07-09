@@ -10,6 +10,7 @@ import ErrorPage from "../pages/ErrorPage";
 import DestinationsPage from "../pages/DestinationsPage";
 import SearchPage from "../pages/SearchPage";
 import PostPage from "../pages/PostPage";
+import DashboardPage from "../pages/DashboardPage";
 
 
 export default function Router() {
@@ -27,6 +28,7 @@ export default function Router() {
                         <Route path="/register" component={RegisterPage} />
                         <Route path="/destinations" component={DestinationsPage} />
                         <Route path="/post" component={PostPage} />
+                        <Route path="/dashboard" component={DashboardPage} />
                         <Route component={ErrorPage} />
                     </Switch>
                 </BrowserRouter>

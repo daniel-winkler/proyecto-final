@@ -2,7 +2,7 @@ import Navlinks from "./Navlinks";
 import Collapsible from "react-collapsible"; // https://www.npmjs.com/package/react-collapsible
 import { useAuthContext } from "../../contexts/AuthContext";
 import LoginButton from "./LoginButton";
-import LogoutButton from "./LogoutButton";
+import DashboardButton from "./DashboardButton";
 
 export default function Navbar() {
 
@@ -20,7 +20,7 @@ export default function Navbar() {
                         <Navlinks/>
                     </div>
                     <div className="navlogin">
-                        {isAuthenticated ? <LogoutButton/> : <LoginButton/>}
+                        {isAuthenticated ? <DashboardButton/> : <LoginButton/>}
                     </div>
                 </nav>
         </div>
