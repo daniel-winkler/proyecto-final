@@ -6,8 +6,11 @@ import Badges from './Badges';
 import Destinations from './Destinations';
 import Images from "./Images"
 import MapInput from "./MapInput"
+import { useAuthContext } from '../../contexts/AuthContext';
 
 export default function Post() {
+
+    const { getToken } = useAuthContext();
 
     const [badges, setBadges] = useState([])
     const [images, setImages] = useState([]);
@@ -26,7 +29,10 @@ export default function Post() {
 
         const options = {
             method: "POST",
-            headers: {"Content-Type": "application/json"},
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${getToken()}`
+                },
             body: JSON.stringify({...form, badges, destination, coords})
         }
 
