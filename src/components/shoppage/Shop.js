@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { countryCodeEmoji } from 'country-code-emoji'; // https://www.npmjs.com/package/country-code-emoji
 import Map from './Map';
 import Contactform from './Contactform';
-import { DETAILS_URL } from "../config";
+import { DETAILS_URL } from "../../config";
 
 
 export default function Shop() {

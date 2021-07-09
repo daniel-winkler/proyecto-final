@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route } from 'react-router';
-import Post from '../components/post/Post'
+import Post from '../components/postpage/Post'
 import { useAuthContext } from '../contexts/AuthContext'
 
 export default function PostPage() {

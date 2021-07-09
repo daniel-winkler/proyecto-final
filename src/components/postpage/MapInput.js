@@ -18,7 +18,6 @@ export default function Map({coords, setCoords}) {
                 zoom={2}
                 onClick={ev => {
                     setCoords({lat: ev.latLng.lat(), lng: ev.latLng.lng()})
-                    console.log(coords);
                   }}>
                     <Marker position={coords} />
                 </GoogleMap>
