@@ -10,8 +10,8 @@ const containerStyle = {
 export default function Map({latitude, longitude}) {
 
     const center = {
-        lat: Number(latitude),
-        lng: Number(longitude)
+        lat: parseFloat(latitude),
+        lng: parseFloat(longitude)
     };
 
     // https://developers.google.com/maps/documentation/javascript/examples/event-click-latlng#maps_event_click_latlng-javascript
