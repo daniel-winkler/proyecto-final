@@ -7,8 +7,7 @@ export default function LogoutButton() {
 
     return (
         <div className="logout" onClick={()=>signOut()}>
-            <i className="fas fa-user fa-lg"></i>
-            <span>Logout</span>
+            <button>Logout</button>
         </div>
     )
 }

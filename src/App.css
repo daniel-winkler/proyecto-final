@@ -81,7 +81,6 @@ select {
 }
 
 .navbar a,
-.logout,
 .hamburger {
   color: var(--divewhite);
   text-decoration: none;
@@ -94,8 +93,7 @@ select {
   display: block;
 }
 
-.navbar a:hover,
-.logout:hover {
+.navbar a:hover {
   border-bottom: solid 3px var(--divelightblue);
 }
 
@@ -161,6 +159,12 @@ select {
 }
 
 /* END LOGIN PAGE  */
+
+/* START DASHBOARD PAGE  */
+
+
+
+/* END DASHBOARD PAGE  */
 
 /* START POST SHOP PAGE  */
 
