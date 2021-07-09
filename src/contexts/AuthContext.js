@@ -1,5 +1,5 @@
 import { createContext, useState, useContext, useEffect } from "react";
-import { CHECK_TOKEN_URL } from "../config";
+// import { CHECK_TOKEN_URL } from "../config";
 
 const LoginContext = createContext(null);
 
@@ -31,7 +31,7 @@ export default function AuthContext({children}) {
         return {...headers, Authorization: `Bearer ${getToken()}`}
     };
 
-    // useEffect(() => {
+    useEffect(() => {
     //     // Recuperar la sesión y comprobar su validez
     //     const options = {
     //         headers: getAuthHeaders()
@@ -48,8 +48,8 @@ export default function AuthContext({children}) {
     //         .then(data => signIn(data.token, data.user)) // Token e info renovada // TODO: argumentos signIn por actualizar (user info)
     //         .catch(() => signOut()); // Limpiamos la sesión
 
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    //     }, []);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        }, []);
 
     const contextValue = {
         loginUser,
