@@ -13,6 +13,7 @@ const DESTINATIONS_URL = ROOT_URL + "/destinations";
 const LANGUAGES_URL = ROOT_URL + "/languages";
 const POST_URL = ROOT_URL + "/api/post";
 const CHECK_TOKEN_URL = ROOT_URL + "/api/check-token";
+const DASHBOARD_URL = ROOT_URL + "/api/dashboard";
 
 export { 
     GOOGLE_API_KEY,
@@ -23,5 +24,6 @@ export {
     DESTINATIONS_URL,
     LANGUAGES_URL,
     POST_URL,
-    CHECK_TOKEN_URL
+    CHECK_TOKEN_URL,
+    DASHBOARD_URL
  }
