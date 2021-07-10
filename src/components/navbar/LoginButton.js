@@ -5,7 +5,7 @@ export default function LoginButton() {
     return (
         <NavLink to="/login">
             <i className="fas fa-user fa-lg"></i>
-            <span>Login</span>
+            <span>Login / Register</span>
         </NavLink>
     )
 }

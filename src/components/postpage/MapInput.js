@@ -3,7 +3,7 @@ import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api'; // https
 import { GOOGLE_API_KEY } from "../../config";
 
 const containerStyle = {
-    width: '800px',
+    width: '100%',
     height: '400px'
 };
   

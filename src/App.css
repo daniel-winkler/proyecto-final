@@ -27,7 +27,7 @@ html {
 
 .backgroundimg {
   background-color: var(--diveblue);
-  background-image: url("images/index.png");
+  background-image: url("images/header.jpg");
   background-blend-mode: luminosity;
   background-position: center;
   background-size: cover;
