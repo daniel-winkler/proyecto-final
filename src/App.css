@@ -164,11 +164,10 @@ select {
 
 .delete button {
   background-color: var(--diveremove);
-  color: var(--divewhite);
 }
 
 .delete button:hover{
-  background-color: var(--divelightblue);
+  background-color: rgb(247, 103, 127);
   transition: 0.2s
 }
 

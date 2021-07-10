@@ -12,9 +12,11 @@ export default function DeleteButton() {
     }
 
     function handleDelete(){
-        fetch(DELETE_URL, options)
-        .then(r => r.json())
-        .then(data => console.log(data))
+        if(window.confirm("Are you sure you want to delete your shop?")){
+            fetch(DELETE_URL, options)
+            .then(r => r.json())
+            .then(data => console.log(data))
+        }
     }
      
 
