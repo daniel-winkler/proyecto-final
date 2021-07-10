@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect } from 'react'
+import DeleteButton from '../components/dashboardpage/DeleteButton';
 import LogoutButton from '../components/dashboardpage/LogoutButton';
 import { DASHBOARD_URL } from '../config'
 import { useAuthContext } from '../contexts/AuthContext'
@@ -22,6 +23,7 @@ export default function DashboardPage() {
     return (
         <div className="dashboardpage divebox">
             <LogoutButton />
+            <DeleteButton />
             
         </div>
     )

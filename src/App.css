@@ -162,7 +162,15 @@ select {
 
 /* START DASHBOARD PAGE  */
 
+.delete button {
+  background-color: var(--diveremove);
+  color: var(--divewhite);
+}
 
+.delete button:hover{
+  background-color: var(--divelightblue);
+  transition: 0.2s
+}
 
 /* END DASHBOARD PAGE  */
 
