@@ -171,6 +171,15 @@ select {
   transition: 0.2s
 }
 
+.dashboardpage button {
+  margin-bottom: 10px;
+}
+
+.dashboardpage {
+  display: flex;
+  justify-content: center;
+}
+
 /* END DASHBOARD PAGE  */
 
 /* START POST SHOP PAGE  */

@@ -7,22 +7,26 @@ export default function DeleteButton() {
     const { getToken } = useAuthContext();
 
     const options = {
-        method: "PUT",
+        method: "PUT", // utilizamos un 'soft delete'
         headers: {"Authorization": `Bearer ${getToken()}`}
     }
 
-    function handleDelete(){
+    async function handleDelete(){
         if(window.confirm("Are you sure you want to delete your shop?")){
-            fetch(DELETE_URL, options)
-            .then(r => r.json())
-            .then(data => console.log(data))
+
+            const response = await fetch(DELETE_URL, options)
+            // eslint-disable-next-line
+            const data = await response.json()
+        
+            if(response.status === 404){
+                alert("Shop not found!")
+            }
         }
     }
      
-
     return (
         <div className="delete" onClick={()=>handleDelete()}>
-            <button>Delete</button>
+            <button>Delete your shop</button>
         </div>
     )
 }
