@@ -11,7 +11,7 @@ html {
   --divelightblue: #93c6d6; /* Active color, Hover */
   --diveboxbg: #f0f4f7; /* Text box background */
   --divewhite: #f5f5f5; /* Text color */
-  --diveremove: #c22240; /* Remove color */
+  --diveremove: #c32240; /* Remove color */
   --divegrey: #adb5bd; /* Border color */
 }
 
@@ -27,7 +27,7 @@ html {
 
 .backgroundimg {
   background-color: var(--diveblue);
-  background-image: url("images/header.jpg");
+  background-image: url("images/bg4.jpg");
   background-blend-mode: luminosity;
   background-position: center;
   background-size: cover;
@@ -167,7 +167,7 @@ select {
 }
 
 .delete button:hover{
-  background-color: rgb(247, 103, 127);
+  background-color: #e4677e;
   transition: 0.2s
 }
 
