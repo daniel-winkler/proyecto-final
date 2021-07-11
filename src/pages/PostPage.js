@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route } from 'react-router';
+import { Route, Redirect } from 'react-router';
 import Post from '../components/postpage/Post'
 import { useAuthContext } from '../contexts/AuthContext'
 
@@ -14,7 +14,7 @@ export default function PostPage() {
             <div>
                 <Post />
             </div>
-            : alert("You have to be logged in to post a shop!")
+            : <Redirect exact to="/login" />
     }} />
     )
 }
