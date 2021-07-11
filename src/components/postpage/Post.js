@@ -37,8 +37,8 @@ export default function Post() {
         }
 
         const response = await fetch(POST_URL, options);
+        // eslint-disable-next-line
         const data = await response.json();
-        console.log(data);
 
         if (response.status === 200){
             alert("Shop has been posted successfully!")

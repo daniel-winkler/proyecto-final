@@ -19,8 +19,8 @@ export default function Register() {
         }
 
         const response = await fetch(REGISTER_URL, options);
+        // eslint-disable-next-line
         const data = await response.json();
-        console.log(data);
     }
 
 
