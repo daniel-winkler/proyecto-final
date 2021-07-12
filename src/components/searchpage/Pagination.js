@@ -25,6 +25,7 @@ export default function Pagination({totalPages, input, setPage}) {
             onPageChange={(e)=>handlePageClick(e)}
             containerClassName={'pagination'}
             activeClassName={'active'}
+            key={input} //añadiendo el estado input como key, nos actualiza el componente reseteando el numero de pagina activa igual a 1.
             />
       </>
     )

@@ -25,7 +25,7 @@ export default function SearchPage() {
             <div className="searchmain">
                 <Searchbar setInput={setInput} setPage={setPage}/>
                 {search.results?.length === 0 && <NothingFound/>}
-                <Pagination totalPages={search.total_pages} input={input} setPage={setPage}/>
+                {search.results?.length !== 0 && <Pagination totalPages={search.total_pages} input={input} setPage={setPage}/>}
                 <div className="cardgrid">
                     {search.results?.map(shop => {
                         return ( <Card key={shop.id} shop={shop} /> )
