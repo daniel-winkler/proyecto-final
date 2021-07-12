@@ -40,7 +40,7 @@ export default function Post() {
         // eslint-disable-next-line
         const data = await response.json();
 
-        if (response.status === 200){
+        if (response.status === 201){
             alert("Shop has been posted successfully!")
         } else if(response.status === 401) { // TODO: token nexpirado no me expulsa de la sesion
             alert("Error: Couldn't post shop, your session has expired. Please log in again!")
