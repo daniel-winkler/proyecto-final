@@ -43,7 +43,9 @@ export default function EditShop({shop}) {
 
         if (response.status === 200){
             alert("Shop has been updated successfully!")
-        } 
+        } else if (response.status === 404) {
+            alert("You can't update until you have posted your shop first!")
+        }
     }
 
     return (
