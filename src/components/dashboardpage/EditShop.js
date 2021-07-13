@@ -51,7 +51,6 @@ export default function EditShop({shop}) {
     return (
         <div>
             <form onSubmit={handleSubmit} method="PUT" className="postform divebox">
-                <h4>Post you shop here!</h4>
                 <div className="inputblock">
                     <label htmlFor="shopname">Name:</label>
                     <input onChange={handleInputChange} value={form.shopname} type="text" name="shopname" id="shopname" required/>

@@ -25,15 +25,13 @@ export default function Dashboard() {
         // eslint-disable-next-line
     }, [])
 
-    console.log(user);
-
     return (
         <div className="dashboard divebox">
             <h2>Welcome, {user.username} !</h2>
             <div>
                 <h3>What would you like to do?</h3>
                 <Collapsible trigger="Edit your account" triggerTagName="button">
-                    <EditAccount/>
+                    <EditAccount user={user}/>
                 </Collapsible>
                 <Collapsible trigger="Edit your shop" triggerTagName="button">
                     <EditShop shop={user.shop}/>
