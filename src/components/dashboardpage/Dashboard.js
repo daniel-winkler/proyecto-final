@@ -27,7 +27,7 @@ export default function Dashboard() {
 
     return (
         <div className="dashboard divebox">
-            <h2>Welcome, {user.username} !</h2>
+            <h2>Hello {user.username} !</h2>
             <div>
                 <h3>What would you like to do?</h3>
                 <Collapsible trigger="Edit your account" triggerTagName="button">

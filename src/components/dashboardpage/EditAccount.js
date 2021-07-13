@@ -7,7 +7,7 @@ export default function EditAccount({user}) {
 
     // TODO: recoger info del usuario para ponerlos como initial state
 
-    const { getToken } = useAuthContext();
+    const { getToken, signOut } = useAuthContext();
 
     const formInitialState = {username: "", email: "", password: ""};
     const [form, handleInputChange] = useForm(formInitialState);
@@ -29,7 +29,10 @@ export default function EditAccount({user}) {
         const data = await response.json();
 
         if(response.status === 202){
-            alert("Account updated successfully!")
+            alert("Account updated successfully! Please log in again with your new credentials.")
+            signOut()
+        } else {
+            alert("Whoops, something wrong happened. Try again later.")
         }
     }
 
