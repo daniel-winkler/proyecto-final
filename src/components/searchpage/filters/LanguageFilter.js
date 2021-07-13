@@ -3,9 +3,10 @@ import React from 'react';
 import Collapsible from 'react-collapsible'; // https://www.npmjs.com/package/react-collapsible
 import { LANGUAGES_URL } from "../../../config";
 
-export default function LanguageFilter({setChecked, checked}) {
+export default function LanguageFilter({setFilter}) {
 
     const [languages, setLanguages] = useState([])
+    const [checked, setChecked] = useState([]);
 
     useEffect(() => {
         fetch(LANGUAGES_URL)
@@ -21,11 +22,15 @@ export default function LanguageFilter({setChecked, checked}) {
         }
     }
 
+    function handleClick(){
+        setFilter(`?lang=${checked[0]}`)
+    }
+
     return (
         <Collapsible trigger="Language" triggerTagName="ul">
             {languages.map(language => {
                 return ( 
-                    <li key={language.id} className="checkboxblock">
+                    <li key={language.id} className="checkboxblock" onClick={()=>handleClick()}>
                         <input onChange={(e)=>handleChange(e)} type="checkbox" name={language.countrycode} id={language.countrycode} /><label htmlFor={language.countrycode}>{language.name}</label>
                     </li>
                 )

@@ -3,21 +3,14 @@ import { useState } from 'react';
 import LanguageFilter from './filters/LanguageFilter';
 import DestinationFilter from './filters/DestinationFilter';
 
-export default function Filter() {
-
-    const [checked, setChecked] = useState([]);
-
-    // TODO: hacer funcionar las checkbox y el boton clear all
-    function clearAll() {
-        console.log();
-    }
+export default function Filter({setFilter}) {
 
     return (
         <aside className="filterbox">
             <h3>Filter By:</h3>
-            <LanguageFilter checked={checked} setChecked={setChecked}/>
+            <LanguageFilter setFilter={setFilter}/>
             <DestinationFilter />
-            <button onClick={clearAll}>Clear all</button>
+            <button>Clear all</button>
         </aside>
     )
 }

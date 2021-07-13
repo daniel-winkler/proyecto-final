@@ -12,6 +12,7 @@ export default function SearchPage() {
     const [search, setSearch] = useState([])
     const [input, setInput] = useState("")
     const [page, setPage] = useState("")
+    const [filter, setFilter] = useState("")
 
     useEffect(() => {
         fetch(SHOPS_URL + input + page)
@@ -21,7 +22,7 @@ export default function SearchPage() {
 
     return (
         <div className="searchpage">
-            <Filter />
+            <Filter setFilter={setFilter}/>
             <div className="searchmain">
                 <Searchbar setInput={setInput} setPage={setPage}/>
                 {search.results?.length === 0 && <NothingFound/>}
