@@ -248,6 +248,10 @@ select {
   background-color: var(--divewhite);
 }
 
+.searchbar label {
+  margin-bottom: 8px;
+}
+
 .card {
   background-color: var(--diveboxbg);
   border-radius: 10px;
@@ -256,7 +260,7 @@ select {
 }
 
 .cardimg {
-  height: 300px;
+  height: 200px;
   border-radius: 10px;
   background-image: url("images/bg1.jpg");
   background-position: center;
