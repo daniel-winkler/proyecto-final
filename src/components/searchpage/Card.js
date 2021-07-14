@@ -1,5 +1,4 @@
 import React from 'react'
-import placeholder from "../../images/placeholder.jpg";
 import { countryCodeEmoji } from 'country-code-emoji'; // https://www.npmjs.com/package/country-code-emoji
 import { useHistory } from "react-router-dom";
 
@@ -14,7 +13,7 @@ export default function Card({shop}) {
 
     return (
         <div className="card">
-            <img src={placeholder} width={200} alt={"Shop"}/>
+            <div className="cardimg"></div>
             <h3>{shop.name}</h3>
             <h4>{shop.location}</h4>
             <p>{shop.languages?.map(language => {
