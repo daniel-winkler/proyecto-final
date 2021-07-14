@@ -10,7 +10,7 @@ import { useAuthContext } from '../../contexts/AuthContext';
 
 export default function Post() {
 
-    const { getToken } = useAuthContext();
+    const { getToken, signOut } = useAuthContext();
 
     const [badges, setBadges] = useState([])
     const [images, setImages] = useState([]);
@@ -42,8 +42,11 @@ export default function Post() {
 
         if (response.status === 201){
             alert("Shop has been posted successfully!")
-        } else if(response.status === 401) { // TODO: token nexpirado no me expulsa de la sesion
+        } else if (response.status === 403){
+            alert("Error: you already posted a shop! Go to your dashboard to edit it")
+        } else if(response.status === 401) {
             alert("Error: Couldn't post shop, your session has expired. Please log in again!")
+            signOut()
         }
     }
 

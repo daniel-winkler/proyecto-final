@@ -20,7 +20,7 @@ export default function DeleteButton() {
         
             if(response.status === 404){
                 alert("Shop not found!")
-            } else if (response.status === 404){
+            } else if (response.status === 202){
                 alert("Shop successfully removed!")
             }
         }

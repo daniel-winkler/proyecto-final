@@ -41,7 +41,7 @@ export default function EditShop({shop}) {
         // eslint-disable-next-line
         const data = await response.json();
 
-        if (response.status === 200){
+        if (response.status === 202){
             alert("Shop has been updated successfully!")
         } else if (response.status === 404) {
             alert("You can't update until you have posted your shop first!")
