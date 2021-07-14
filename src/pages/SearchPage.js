@@ -12,6 +12,7 @@ export default function SearchPage() {
     const [search, setSearch] = useState([])
     const [input, setInput] = useState("")
     const [page, setPage] = useState("")
+    // eslint-disable-next-line
     const [filter, setFilter] = useState("")
 
     useEffect(() => {
@@ -19,6 +20,7 @@ export default function SearchPage() {
         .then(r => r.json())
         .then(data => setSearch(data))
     }, [input, page])
+    
 
     return (
         <div className="searchpage">

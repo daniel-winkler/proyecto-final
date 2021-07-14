@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import LanguageFilter from './filters/LanguageFilter';
 import DestinationFilter from './filters/DestinationFilter';
 
