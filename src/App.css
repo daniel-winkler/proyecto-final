@@ -180,6 +180,10 @@ select {
   justify-content: center;
 }
 
+#editform {
+  width: 80%;
+}
+
 /* END DASHBOARD PAGE  */
 
 /* START POST SHOP PAGE  */
@@ -212,9 +216,13 @@ select {
 
 .registercomponent {
   display: flex;
-  flex-direction: column;
-  /* width: 80%; */
   justify-content: center;
+  align-items: center;
+}
+
+.registerform,
+.registerform input {
+  width: 100%;
 }
 
 .registerform h4 {
@@ -226,7 +234,7 @@ select {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px; /* different from login form */
-  width: 75%;
+  /* width: 75%; */
 }
 
 /* END REGISTER PAGE  */
@@ -412,6 +420,10 @@ select {
     flex-direction: row;
   }
 
+  .registerform {
+    width: 50%;
+  }
+
   .searchpage {
     flex-direction: row;
   }
@@ -448,6 +460,10 @@ select {
 
   .shop {
     width: 66%;
+  }
+
+  .registerform {
+    width: 25%;
   }
   
 }

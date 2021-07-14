@@ -39,7 +39,7 @@ export default function EditAccount({user}) {
 
     return (
         <div className="registercomponent">
-            <form onSubmit={handleSubmit} className="registerform divebox">
+            <form onSubmit={handleSubmit} className="registerform divebox" id="editform">
 
                 <label htmlFor="username">Username:</label>
                 <input onChange={handleInputChange} value={form.username} type="text" name="username" id="username" required/>
