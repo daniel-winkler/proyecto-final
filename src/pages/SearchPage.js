@@ -12,19 +12,18 @@ export default function SearchPage() {
     const [search, setSearch] = useState([])
     const [input, setInput] = useState("")
     const [page, setPage] = useState("")
-    // eslint-disable-next-line
-    const [filter, setFilter] = useState("")
+    const [destination, setDestination] = useState("")
 
     useEffect(() => {
-        fetch(SHOPS_URL + input + page)
+        fetch(SHOPS_URL + destination + input + page)
         .then(r => r.json())
         .then(data => setSearch(data))
-    }, [input, page])
+    }, [destination, input, page])
     
 
     return (
         <div className="searchpage">
-            <Filter setFilter={setFilter}/>
+            <Filter setDestination={setDestination}/>
             <div className="searchmain">
                 <Searchbar setInput={setInput} setPage={setPage}/>
                 {search.results?.length === 0 && <NothingFound/>}
