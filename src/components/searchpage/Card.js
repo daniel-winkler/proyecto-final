@@ -1,14 +1,27 @@
 import React from 'react'
 import { countryCodeEmoji } from 'country-code-emoji'; // https://www.npmjs.com/package/country-code-emoji
 import { useHistory } from "react-router-dom";
+import { CLICKCOUNTER_URL } from '../../config';
 
 
 export default function Card({shop}) {
 
     const history = useHistory();
 
-    function moreInfo(id) {
+    async function moreInfo(id) {
         history.push(`/shop/${id}`)
+
+        const destinationID = shop.destination.id
+
+        const options = {
+            method: "PUT",
+            headers: {"Content-Type": "application/json"},
+            body: destinationID
+        }
+
+        const response = await fetch(CLICKCOUNTER_URL, options);
+        // eslint-disable-next-line
+        const data = await response.json();
     }
 
     return (

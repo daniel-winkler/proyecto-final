@@ -17,6 +17,7 @@ const DASHBOARD_URL = ROOT_URL + "/api/dashboard";
 const DELETE_URL = ROOT_URL + "/api/delete";
 const UPDATE_URL = ROOT_URL + "/api/update";
 const ACCOUNT_URL = ROOT_URL + "/api/account";
+const CLICKCOUNTER_URL = ROOT_URL + "/clickcounter";
 
 export { 
     GOOGLE_API_KEY,
@@ -31,5 +32,6 @@ export {
     DASHBOARD_URL,
     DELETE_URL,
     UPDATE_URL,
-    ACCOUNT_URL
+    ACCOUNT_URL,
+    CLICKCOUNTER_URL
  }
