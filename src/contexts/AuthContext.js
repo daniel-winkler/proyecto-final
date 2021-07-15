@@ -1,5 +1,5 @@
 import { createContext, useState, useContext, useEffect } from "react";
-// import { CHECK_TOKEN_URL } from "../config";
+import { CHECK_TOKEN_URL } from "../config";
 
 const LoginContext = createContext(null);
 
@@ -32,21 +32,21 @@ export default function AuthContext({children}) {
     };
 
     useEffect(() => {
-    //     // Recuperar la sesión y comprobar su validez
-    //     const options = {
-    //         headers: getAuthHeaders()
-    //     };
+        // // Recuperar la sesión y comprobar su validez
+        // const options = {
+        //     headers: getAuthHeaders()
+        // };
 
-    //     // si ni siquiera hay token guardado, no hacemos la petición
-    //     getToken() && fetch(CHECK_TOKEN_URL, options) // TODO: URL para comprobar la Authentificacion???
-    //         .then(response => {
-    //             if (!response.ok) {
-    //                 throw new Error(response.statusText);
-    //             }
-    //             return response.json();
-    //         })
-    //         .then(data => signIn(data.token, data.user)) // Token e info renovada // TODO: argumentos signIn por actualizar (user info)
-    //         .catch(() => signOut()); // Limpiamos la sesión
+        // // si ni siquiera hay token guardado, no hacemos la petición
+        // getToken() && fetch(CHECK_TOKEN_URL, options) // TODO: URL para comprobar la Authentificacion???
+        //     .then(response => {
+        //         // if (!response.ok) {
+        //         //     throw new Error(response.statusText);
+        //         // }
+        //         return response.json();
+        //     })
+        //     .then(data => signIn(data.token)) // Token renovado // 
+        //     // .catch(() => signOut()); // Limpiamos la sesión
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
         }, []);
