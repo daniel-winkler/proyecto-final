@@ -4,11 +4,11 @@ import { useParamsContext } from '../../contexts/ParamsContext';
 
 export default function Pagination({totalPages}) {
 
-    const { input, setPage } = useParamsContext();
+    const { setPage, input, destination, language } = useParamsContext();
 
     function handlePageClick(e){
         let currentPage = e.selected + 1;
-        if (input === ""){
+        if (input === "" && destination === "" && language === ""){
             setPage(`?page=${currentPage}`)
         } else {
             setPage(`&page=${currentPage}`)
