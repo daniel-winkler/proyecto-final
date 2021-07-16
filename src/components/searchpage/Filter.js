@@ -2,13 +2,13 @@ import React from 'react';
 import LanguageFilter from './filters/LanguageFilter';
 import DestinationFilter from './filters/DestinationFilter';
 
-export default function Filter({setDestination, setLanguage}) {
+export default function Filter() {
 
     return (
         <aside className="filterbox">
             <h3>Filter By:</h3>
-            <LanguageFilter setLanguage={setLanguage}/>
-            <DestinationFilter setDestination={setDestination}/>
+            <LanguageFilter/>
+            <DestinationFilter/>
             <button>Clear all</button>
         </aside>
     )

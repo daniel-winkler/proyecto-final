@@ -10,14 +10,7 @@ import { useParamsContext } from '../../contexts/ParamsContext';
 
 export default function Search() {
 
-    const { input,
-        setInput,
-        page,
-        setPage,
-        destination,
-        setDestination,
-        language,
-        setLanguage } = useParamsContext();
+    const { input, page, destination, language } = useParamsContext();
 
     const [search, setSearch] = useState([])
     
@@ -30,11 +23,11 @@ export default function Search() {
 
     return (
         <div className="searchpage">
-            <Filter setDestination={setDestination} setLanguage={setLanguage}/>
+            <Filter/>
             <div className="searchmain">
-                <Searchbar setInput={setInput} setPage={setPage}/>
+                <Searchbar />
                 {search.results?.length === 0 && <NothingFound/>}
-                {search.results?.length !== 0 && <Pagination totalPages={search.total_pages} input={input} setPage={setPage}/>}
+                {search.results?.length !== 0 && <Pagination totalPages={search.total_pages} />}
                 <div className="cardgrid">
                     {search.results?.map(shop => {
                         return ( <Card key={shop.id} shop={shop} /> )

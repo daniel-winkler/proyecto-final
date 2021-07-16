@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactPaginate from 'react-paginate'; // https://github.com/AdeleD/react-paginate
+import { useParamsContext } from '../../contexts/ParamsContext';
 
-export default function Pagination({totalPages, input, setPage}) {
+export default function Pagination({totalPages}) {
+
+    const { input, setPage } = useParamsContext();
 
     function handlePageClick(e){
         let currentPage = e.selected + 1;

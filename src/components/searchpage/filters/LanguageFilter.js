@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import React from 'react';
 import Collapsible from 'react-collapsible'; // https://www.npmjs.com/package/react-collapsible
 import { LANGUAGES_URL } from "../../../config";
+import { useParamsContext } from '../../../contexts/ParamsContext';
 
-export default function LanguageFilter({setLanguage}) {
+export default function LanguageFilter() {
 
+    const { setLanguage } = useParamsContext();
     const [languages, setLanguages] = useState([])
 
     useEffect(() => {

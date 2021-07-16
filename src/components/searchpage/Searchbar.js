@@ -1,6 +1,9 @@
 import React from 'react'
+import { useParamsContext } from '../../contexts/ParamsContext'
 
-export default function Searchbar({setInput, setPage}) {
+export default function Searchbar() {
+
+    const { setInput, setPage } = useParamsContext();
 
     function handleSearch(e){
         setPage("")

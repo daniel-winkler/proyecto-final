@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import React from 'react';
 import Collapsible from 'react-collapsible'; // https://www.npmjs.com/package/react-collapsible
 import { DESTINATIONS_URL } from "../../../config";
+import { useParamsContext } from '../../../contexts/ParamsContext';
 
-export default function DestinationFilter({setDestination}) {
+export default function DestinationFilter() {
 
+    const { setDestination } = useParamsContext();
     const [destinations, setDestinations] = useState([])
 
     useEffect(() => {
@@ -14,8 +16,8 @@ export default function DestinationFilter({setDestination}) {
     }, [])
 
     function selectDestination(e){
-        console.log(e.target.id);
-        // setDestination(`?dest=${e.target.id}`)
+        
+        setDestination(`?dest=${e.target.id}`)
        
     }
 
