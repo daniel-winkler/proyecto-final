@@ -13,17 +13,18 @@ export default function SearchPage() {
     const [input, setInput] = useState("")
     const [page, setPage] = useState("")
     const [destination, setDestination] = useState("")
+    const [language, setLanguage] = useState("")
 
     useEffect(() => {
-        fetch(SHOPS_URL + destination + input + page)
+        fetch(SHOPS_URL + language + input + page)
         .then(r => r.json())
         .then(data => setSearch(data))
-    }, [destination, input, page])
+    }, [language, input, page])
     
 
     return (
         <div className="searchpage">
-            <Filter setDestination={setDestination}/>
+            <Filter setDestination={setDestination} setLanguage={setLanguage}/>
             <div className="searchmain">
                 <Searchbar setInput={setInput} setPage={setPage}/>
                 {search.results?.length === 0 && <NothingFound/>}

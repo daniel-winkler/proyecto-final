@@ -3,10 +3,9 @@ import React from 'react';
 import Collapsible from 'react-collapsible'; // https://www.npmjs.com/package/react-collapsible
 import { LANGUAGES_URL } from "../../../config";
 
-export default function LanguageFilter({setFilter}) {
+export default function LanguageFilter({setLanguage}) {
 
     const [languages, setLanguages] = useState([])
-    const [checked, setChecked] = useState([]);
 
     useEffect(() => {
         fetch(LANGUAGES_URL)
@@ -14,24 +13,26 @@ export default function LanguageFilter({setFilter}) {
         .then(data => setLanguages(data))
     }, [])
 
-    function handleChange(e){
-        if(e.target.checked && !checked.includes(e.target.id)){
-            setChecked([...checked, e.target.id])
-        } else {
-            setChecked(checked.filter(check => check !== e.target.id))
-        }
-    }
+    // function handleChange(e){
+    //     if(e.target.checked && !checked.includes(e.target.id)){
+    //         setChecked([...checked, e.target.id])
+    //     } else {
+    //         setChecked(checked.filter(check => check !== e.target.id))
+    //     }
+    // }
 
-    function handleClick(){
-        setFilter(`?lang=${checked[0]}`)
+    function selectLanguage(e){
+    
+        setLanguage(`?lang=${e.target.id}`)
+       
     }
 
     return (
         <Collapsible trigger="Language" triggerTagName="ul">
             {languages.map(language => {
                 return ( 
-                    <li key={language.id} className="checkboxblock" onClick={()=>handleClick()}>
-                        <input onChange={(e)=>handleChange(e)} type="checkbox" name={language.countrycode} id={language.countrycode} /><label htmlFor={language.countrycode}>{language.name}</label>
+                    <li key={language.id} className="checkboxblock">
+                        <input type="radio" onClick={(e)=>selectLanguage(e)} name="language" id={language.countrycode} /><label htmlFor={language.countrycode}>{language.name}</label>
                     </li>
                 )
             })}
