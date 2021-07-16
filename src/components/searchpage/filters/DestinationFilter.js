@@ -6,7 +6,7 @@ import { useParamsContext } from '../../../contexts/ParamsContext';
 
 export default function DestinationFilter() {
 
-    const { setDestination } = useParamsContext();
+    const { setDestination, setPage, setLanguage, setInput } = useParamsContext();
     const [destinations, setDestinations] = useState([])
 
     useEffect(() => {
@@ -16,9 +16,10 @@ export default function DestinationFilter() {
     }, [])
 
     function selectDestination(e){
-        
+        setPage("")
+        setLanguage("")
+        setInput("")
         setDestination(`?dest=${e.target.id}`)
-       
     }
 
     return (

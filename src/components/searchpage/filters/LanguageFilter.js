@@ -6,7 +6,7 @@ import { useParamsContext } from '../../../contexts/ParamsContext';
 
 export default function LanguageFilter() {
 
-    const { setLanguage } = useParamsContext();
+    const { setLanguage, setPage, setDestination, setInput } = useParamsContext();
     const [languages, setLanguages] = useState([])
 
     useEffect(() => {
@@ -24,9 +24,10 @@ export default function LanguageFilter() {
     // }
 
     function selectLanguage(e){
-    
+        setPage("")
+        setDestination("")
+        setInput("")
         setLanguage(`?lang=${e.target.id}`)
-       
     }
 
     return (
