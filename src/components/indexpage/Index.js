@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { DESTINATION_IMAGES_URL, POPULAR_URL } from '../../config'
+import { POPULAR_URL } from '../../config'
+import Destinationcard from './Destinationcard'
 
 export default function Index() {
 
@@ -13,10 +14,10 @@ export default function Index() {
     }, [])
 
     return (
-        <div>
+        <div className="popular">
             {popular.map(destination => {
                 return(
-                    <img key={destination.id} src={DESTINATION_IMAGES_URL + destination.image} height={300} width={500} alt={destination.name}/>
+                    <Destinationcard key={destination.id} destination={destination} />
                 )
             })}
         </div>
