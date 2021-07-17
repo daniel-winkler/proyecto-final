@@ -116,7 +116,7 @@ select {
 
 /* START HEADER  */
 
-.header {
+header {
   height: 100px;
   background-color: var(--diveblue);
   color: var(--divewhite);
@@ -148,7 +148,7 @@ select {
   height: 30%;
   overflow: scroll;
   overflow-x: hidden;
-  scrollbar-color: var(--diveblue) var(--diveboxbg);
+  scrollbar-color: var(--divelightblue) var(--diveboxbg);
   margin-top: 0px;
   font-size: 0.8em;
 }
@@ -419,7 +419,7 @@ select {
   padding-bottom: 75px; /* footer height */
 }
 
-.footer {
+footer {
   position: absolute;
   bottom: 0;
   width: 100%;
