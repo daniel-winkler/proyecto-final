@@ -11,13 +11,17 @@ const SHOPS_URL = ROOT_URL + "/shops";
 const DETAILS_URL = ROOT_URL + "/shopdetails/"; // + id
 const DESTINATIONS_URL = ROOT_URL + "/destinations";
 const LANGUAGES_URL = ROOT_URL + "/languages";
+const POPULAR_URL = ROOT_URL + "/popular";
+const DESTINATION_IMAGES_URL = ROOT_URL + "/images/"; // + filename.jpg
+const CLICKCOUNTER_URL = ROOT_URL + "/clickcounter";
+
+// APIs protegidas
 const POST_URL = ROOT_URL + "/api/post";
 const CHECK_TOKEN_URL = ROOT_URL + "/api/check-token";
 const DASHBOARD_URL = ROOT_URL + "/api/dashboard";
 const DELETE_URL = ROOT_URL + "/api/delete";
 const UPDATE_URL = ROOT_URL + "/api/update";
 const ACCOUNT_URL = ROOT_URL + "/api/account";
-const CLICKCOUNTER_URL = ROOT_URL + "/clickcounter";
 
 export { 
     GOOGLE_API_KEY,
@@ -33,5 +37,7 @@ export {
     DELETE_URL,
     UPDATE_URL,
     ACCOUNT_URL,
-    CLICKCOUNTER_URL
+    CLICKCOUNTER_URL,
+    POPULAR_URL,
+    DESTINATION_IMAGES_URL
  }
