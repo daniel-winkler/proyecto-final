@@ -1,5 +1,5 @@
 import React from 'react'
-import Index from '../components/Index'
+import Index from '../components/indexpage/Index'
 
 export default function IndexPage() {
     return (
