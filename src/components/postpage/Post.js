@@ -25,7 +25,6 @@ export default function Post() {
 
     async function handleSubmit(e){
         e.preventDefault();
-        console.log({...form, badges, destination, coords});
 
         const options = {
             method: "POST",

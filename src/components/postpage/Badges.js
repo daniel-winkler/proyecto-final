@@ -21,7 +21,6 @@ export default function Badges({badges, setBadges}) {
     }
   
     function removeBadge(e){
-        console.log(e.target);
       setBadges(
         badges.filter(badge => badge.name !== e.target.innerText.split(' ')[0])
       )

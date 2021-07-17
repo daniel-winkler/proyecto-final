@@ -10,8 +10,6 @@ export default function Register() {
     async function handleSubmit(e){
         e.preventDefault();
 
-        console.log(form);
-
         const options = {
             method: "POST",
             headers: {"Content-Type": "application/json"},
