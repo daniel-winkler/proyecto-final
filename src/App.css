@@ -17,6 +17,10 @@ html {
 
 /* START GLOBAL CLASSES & ELEMENTS  */
 
+.d-flex {
+  display: flex;
+}
+
 .divebox {
   background-color: var(--diveboxbg);
   border: 1px solid var(--divegrey);
@@ -71,7 +75,6 @@ select {
 
 .navbar {
   background-color: var(--diveblue);
-  display: flex;
   align-items: center;
   justify-content: space-between;
   padding-left: 10px;
@@ -121,7 +124,6 @@ header {
   background-color: var(--diveblue);
   color: var(--divewhite);
   margin: 0;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -135,7 +137,6 @@ header img {
 /* START INDEX PAGE  */
 
 .indexpage {
-  display: flex;
   flex-direction: column;
 }
 
@@ -150,12 +151,10 @@ header img {
   font-size: 1.5em;
 }
 .popular {
-  display: flex;
   flex-direction: column;
 }
 
 .destinationcard {
-  display: flex;
   flex-direction: column;
 }
 
@@ -184,7 +183,6 @@ header img {
 /* START LOGIN PAGE  */
 
 .logincomponent {
-  display: flex;
   flex-direction: column;
   /* width: 80%; */
   justify-content: center;
@@ -224,7 +222,6 @@ header img {
 }
 
 .dashboardpage {
-  display: flex;
   justify-content: center;
 }
 
@@ -237,7 +234,6 @@ header img {
 /* START POST SHOP PAGE  */
 
 .badges {
-  display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -263,7 +259,6 @@ header img {
 /* START REGISTER PAGE  */
 
 .registercomponent {
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -291,14 +286,12 @@ header img {
 
 .searchpage,
 .searchmain {
-  display: flex;
   flex-direction: column;
 }
 
 .searchbar,
 .nothingfound,
 .errorpage {
-  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--divewhite);
@@ -334,7 +327,7 @@ header img {
 }
 
 .cardgrid {
-  display: flex;
+  display: flex; /* no utilizamos clase global d-flex ya que con el responsive lo convertiremos a display:grid */
   flex-direction: column;
 }
 
@@ -363,7 +356,7 @@ header img {
 .pagination {
   flex-shrink: 2;
   align-self: center;
-  display: flex;
+  display: flex; /* no utilizamos clase global porque funciona de manera interna en el componente de paginacion */
   justify-content: center;
   align-items: center;
   background-color: var(--diveboxbg);
@@ -441,7 +434,6 @@ footer {
   height: 60px;
   background-color: var(--diveblue);
   color: var(--divewhite);
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -500,7 +492,6 @@ footer i {
   }
 
   .shoppage {
-    display: flex;
     flex-direction: column;
     align-items: center;
   }

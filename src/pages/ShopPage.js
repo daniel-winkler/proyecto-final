@@ -3,7 +3,7 @@ import Shop from '../components/shoppage/Shop'
 
 export default function ShopPage() {
     return (
-        <div className="shoppage">
+        <div className="shoppage d-flex">
             <Shop />
         </div>
     )

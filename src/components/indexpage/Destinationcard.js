@@ -4,7 +4,7 @@ import { DESTINATION_IMAGES_URL } from '../../config'
 export default function Destinationcard({destination}) {
 
     return (
-        <div className="destinationcard divebox">
+        <div className="destinationcard divebox d-flex">
             <img src={DESTINATION_IMAGES_URL + destination.image} className="destinationimg" alt={destination.name}/>
             <h4>{destination.name}</h4>
             <p>{destination.description}</p>

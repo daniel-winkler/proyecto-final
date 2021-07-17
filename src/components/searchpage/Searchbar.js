@@ -17,7 +17,7 @@ export default function Searchbar() {
     }
 
     return (
-        <div className="searchbar divebox">
+        <div className="searchbar divebox d-flex">
             <label htmlFor="searchbar">What are you looking for?</label>
             <input onChange={(e)=>handleSearch(e)} type="text" id="searchbar" placeholder="Type away!" />
         </div>

@@ -29,7 +29,7 @@ export default function Register() {
 
 
     return (
-        <div className="registercomponent">
+        <div className="registercomponent d-flex">
             <form onSubmit={handleSubmit} className="registerform divebox">
 
                 <h4>Register for a new account</h4>

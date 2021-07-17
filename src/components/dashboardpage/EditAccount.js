@@ -38,7 +38,7 @@ export default function EditAccount({user}) {
 
 
     return (
-        <div className="registercomponent">
+        <div className="registercomponent d-flex">
             <form onSubmit={handleSubmit} className="registerform divebox" id="editform">
 
                 <label htmlFor="username">Username:</label>

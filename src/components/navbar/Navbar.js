@@ -10,7 +10,7 @@ export default function Navbar() {
 
     return (
         <div>
-            <nav className="navbar">
+            <nav className="navbar d-flex">
                     <div className="hamburger">
                         <Collapsible trigger="" triggerClassName="fas fa-bars fa-lg" triggerOpenedClassName="fas fa-bars fa-lg" triggerTagName="i" > {/* <i className="fas fa-bars fa-lg"></i> */}
                             <Navlinks />

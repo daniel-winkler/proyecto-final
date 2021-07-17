@@ -11,7 +11,7 @@ export default function DashboardPage() {
         <Route render={() => {
             return isAuthenticated 
                 ?
-                <div className="dashboardpage">
+                <div className="dashboardpage d-flex">
                     <Dashboard />
                 </div>
                 : <Redirect exact to="/login" />

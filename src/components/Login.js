@@ -39,7 +39,7 @@ export default function Login() {
     }
 
     return (
-        <div className="logincomponent">
+        <div className="logincomponent d-flex">
             <div className="loginform divebox">
                 <h3>Registered users</h3>
                 <form onSubmit={handleSubmit}>

@@ -22,9 +22,9 @@ export default function Search() {
     
 
     return (
-        <div className="searchpage">
+        <div className="searchpage d-flex">
             <Filter/>
-            <div className="searchmain">
+            <div className="searchmain d-flex">
                 <Searchbar />
                 {search.results?.length === 0 && <NothingFound/>}
                 {search.results?.length !== 0 && <Pagination totalPages={search.total_pages} />}

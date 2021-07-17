@@ -21,9 +21,9 @@ export default function Index() {
     }
 
     return (
-        <div className="indexpage">
+        <div className="indexpage d-flex">
             <h2 className="divebox">Top destinations</h2>
-            <div className="popular">
+            <div className="popular d-flex">
                 {popular.map(destination => {
                     return(
                         <Destinationcard key={destination.id} destination={destination} />

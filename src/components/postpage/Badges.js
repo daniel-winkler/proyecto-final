@@ -38,7 +38,7 @@ export default function Badges({badges, setBadges}) {
                         )
                     })}
             </select>
-            <div className="badges">
+            <div className="badges d-flex">
                 {badges.map(badge => {
                     return(<span key={badge.id} onClick={(e)=>removeBadge(e)}>{badge.name} {countryCodeEmoji(badge.countrycode)}</span>)
                 })}
