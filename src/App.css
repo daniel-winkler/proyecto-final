@@ -134,6 +134,21 @@ header img {
 
 /* START INDEX PAGE  */
 
+.indexpage {
+  display: flex;
+  flex-direction: column;
+}
+
+.indexpage h2 {
+  align-self: center;
+}
+
+.indexpage button {
+  align-self: center;
+  padding: 20px;
+  margin: 30px;
+  font-size: 1.5em;
+}
 .popular {
   display: flex;
   flex-direction: column;
@@ -157,10 +172,6 @@ header img {
   font-size: 0.8em;
 }
 
-.destinationcard button {
-  align-self: flex-end;
-  justify-self: flex-end;
-}
 
 .destinationimg {
   border-radius: 10px;
