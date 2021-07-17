@@ -126,6 +126,10 @@ header {
   justify-content: center;
 }
 
+header img {
+  height: 150px;
+}
+
 /* END HEADER  */
 
 /* START INDEX PAGE  */
