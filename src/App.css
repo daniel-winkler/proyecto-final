@@ -130,6 +130,39 @@ select {
 
 /* START INDEX PAGE  */
 
+.popular {
+  display: flex;
+  flex-direction: column;
+}
+
+.destinationcard {
+  display: flex;
+  flex-direction: column;
+}
+
+.destinationcard h4 {
+  margin-bottom: 8px;
+}
+
+.destinationcard p {
+  height: 30%;
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-color: var(--diveblue) var(--diveboxbg);
+  margin-top: 0px;
+  font-size: 0.8em;
+}
+
+.destinationcard button {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.destinationimg {
+  border-radius: 10px;
+  height: 60%;
+  width: 100%;
+}
 
 /* END INDEX PAGE  */
 
@@ -403,6 +436,10 @@ select {
 /* START MOBILE FIRST RESPONSIVE */
 
 @media only screen and (min-width: 640px) { /* for Tablet */
+
+  .popular {
+    flex-direction: row;
+  }
 
   .backgroundimg {
     background-image: url("images/bg4.jpg");
