@@ -23,29 +23,18 @@ export default function Shop() {
             <div className="shop">
                 <h2>{shop.name}</h2>
                 <h3>{shop.location}</h3>
-                {/* <p>{shop.overview}</p> */}
             </div>
             <div className="shop">
-                {/* <h4>Certificate Agencies</h4>
-                <p>{shop.cert_agencies?.map(agency => {
-                    return ( <span>{agency}</span> )
-                })}</p> */}
                 <h4>Languages:</h4>
                 <p>{shop.languages?.map(language => {
                     return ( <span key={language.id} className="flags">{countryCodeEmoji(language.countrycode)}</span> )
                 })}</p>
             </div>
-            {/* <div className="shop">
-                <h4>Dive Types:</h4>
-                <p>{shop.dive_types?.map(type => {
-                    return ( <span>{type}</span> )
-                })}</p>
-            </div> */}
             <div className="shop">
                 <h4>Location</h4>
                 <Map latitude={shop.coords?.lat} longitude={shop.coords?.lng} />
             </div>
-            <Contactform />
+            <Contactform id={id} />
         </>
     )
 }

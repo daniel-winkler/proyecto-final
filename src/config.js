@@ -23,6 +23,9 @@ const DELETE_URL = ROOT_URL + "/api/delete";
 const UPDATE_URL = ROOT_URL + "/api/update";
 const ACCOUNT_URL = ROOT_URL + "/api/account";
 
+// Mailer
+const MAILER_URL = ROOT_URL + "/mailer";
+
 export { 
     GOOGLE_API_KEY,
     REGISTER_URL,
@@ -39,5 +42,6 @@ export {
     ACCOUNT_URL,
     CLICKCOUNTER_URL,
     POPULAR_URL,
-    DESTINATION_IMAGES_URL
+    DESTINATION_IMAGES_URL,
+    MAILER_URL
  }
