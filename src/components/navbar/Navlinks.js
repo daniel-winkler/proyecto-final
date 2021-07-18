@@ -5,8 +5,6 @@ export default function NavLinks() {
         <>
             <NavLink to="/" activeClassName="active" exact={true}>Home</NavLink>
             <NavLink to="/search" activeClassName="active">Search</NavLink>
-            <NavLink to="/destinations" activeClassName="active">Destinations</NavLink>
-            <NavLink to="/logbook" activeClassName="active">Logbook</NavLink>
             <NavLink to="/post" activeClassName="active">Post your shop!</NavLink>
         </>
     )

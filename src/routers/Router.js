@@ -7,7 +7,6 @@ import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import ShopPage from "../pages/ShopPage";
 import ErrorPage from "../pages/ErrorPage";
-import DestinationsPage from "../pages/DestinationsPage";
 import SearchPage from "../pages/SearchPage";
 import PostPage from "../pages/PostPage";
 import DashboardPage from "../pages/DashboardPage";
@@ -26,7 +25,6 @@ export default function Router() {
                         <Route path="/shop/:id" component={ShopPage} />
                         <Route path="/login" component={LoginPage} />
                         <Route path="/register" component={RegisterPage} />
-                        <Route path="/destinations" component={DestinationsPage} />
                         <Route path="/post" component={PostPage} />
                         <Route path="/dashboard" component={DashboardPage} />
                         <Route component={ErrorPage} />
