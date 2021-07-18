@@ -17,7 +17,7 @@ const CLICKCOUNTER_URL = ROOT_URL + "/clickcounter";
 
 // APIs protegidas
 const POST_URL = ROOT_URL + "/api/post";
-const CHECK_TOKEN_URL = ROOT_URL + "/api/check-token";
+const CHECK_TOKEN_URL = ROOT_URL + "/api/token_check";
 const DASHBOARD_URL = ROOT_URL + "/api/dashboard";
 const DELETE_URL = ROOT_URL + "/api/delete";
 const UPDATE_URL = ROOT_URL + "/api/update";
