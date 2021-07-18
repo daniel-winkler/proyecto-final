@@ -31,8 +31,11 @@ export default function EditAccount({user}) {
         if(response.status === 202){
             alert("Account updated successfully! Please log in again with your new credentials.")
             signOut()
-        } else {
-            alert("Whoops, something wrong happened. Try again later.")
+         } else if (response.status === 401){
+            alert("Something happened. Please log in again.")
+            signOut()
+        } else if (response.status === 500) {
+            alert("Whoops, something happened. Try again later.")
         }
     }
 

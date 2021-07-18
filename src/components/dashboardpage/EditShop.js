@@ -12,7 +12,7 @@ export default function EditShop({shop}) {
 
     // TODO: recoger info del shop del usuario para ponerlos como initial state
 
-    const { getToken } = useAuthContext();
+    const { getToken, signOut } = useAuthContext();
 
     const [badges, setBadges] = useState([])
     const [images, setImages] = useState([]);
@@ -33,7 +33,7 @@ export default function EditShop({shop}) {
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${getToken()}`
-                },
+            },
             body: JSON.stringify({...form, badges, destination, coords})
         }
 
@@ -45,6 +45,9 @@ export default function EditShop({shop}) {
             alert("Shop has been updated successfully!")
         } else if (response.status === 404) {
             alert("You can't update until you have posted your shop first!")
+        } else if (response.status === 401){
+            alert("Something happened. Please log in again.")
+            signOut()
         }
     }
 

@@ -4,7 +4,7 @@ import { DELETE_URL } from '../../config';
 
 export default function DeleteButton() {
 
-    const { getToken } = useAuthContext();
+    const { getToken, signOut } = useAuthContext();
 
     const options = {
         method: "PUT", // utilizamos un 'soft delete'
@@ -22,6 +22,9 @@ export default function DeleteButton() {
                 alert("Shop not found!")
             } else if (response.status === 202){
                 alert("Shop successfully removed!")
+            } else if (response.status === 401){
+                alert("Something happened. Please log in again.")
+                signOut()
             }
         }
     }

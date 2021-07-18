@@ -10,7 +10,7 @@ import Collapsible from "react-collapsible"; // https://www.npmjs.com/package/re
 
 export default function Dashboard() {
 
-    const { getToken } = useAuthContext(); //TODO: isAuthorized?
+    const { getToken, signOut } = useAuthContext(); //TODO: isAuthorized?
 
     const [ user, setUser ] = useState({})
 
@@ -19,9 +19,16 @@ export default function Dashboard() {
     }
 
     useEffect(() => {
-        fetch(DASHBOARD_URL, options)
-        .then(r => r.json())
-        .then(data => setUser(data))
+        async function fetchDashboard(){
+            let response = await fetch(DASHBOARD_URL, options)
+            let data = await response.json()
+            setUser(data)
+            if (response.status === 401){
+                alert("Something happened. Please log in again.")
+                signOut()
+            }
+        }
+        fetchDashboard()
         // eslint-disable-next-line
     }, [])
 
