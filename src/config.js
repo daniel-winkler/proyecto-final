@@ -22,6 +22,7 @@ const DASHBOARD_URL = ROOT_URL + "/api/dashboard";
 const DELETE_URL = ROOT_URL + "/api/delete";
 const UPDATE_URL = ROOT_URL + "/api/update";
 const ACCOUNT_URL = ROOT_URL + "/api/account";
+const IMAGE_UPLOAD_URL = ROOT_URL + "/api/uploadshopimage/"; // + id
 
 // Mailer
 const MAILER_URL = ROOT_URL + "/mailer";
@@ -43,5 +44,6 @@ export {
     CLICKCOUNTER_URL,
     POPULAR_URL,
     DESTINATION_IMAGES_URL,
-    MAILER_URL
+    MAILER_URL,
+    IMAGE_UPLOAD_URL
  }

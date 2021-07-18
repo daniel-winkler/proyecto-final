@@ -1,19 +1,18 @@
 import React from 'react'
 import { useState } from 'react';
 import { useForm } from '../../hooks/useForm'
-import { POST_URL } from '../../config';
+import { POST_URL, IMAGE_UPLOAD_URL } from '../../config';
 import Badges from './Badges';
 import Destinations from './Destinations';
-import Images from "./Images"
+// import Images from "./Images"
 import MapInput from "./MapInput"
 import { useAuthContext } from '../../contexts/AuthContext';
 
 export default function Post() {
 
-    const { getToken, signOut } = useAuthContext();
+    const { getToken, signOut, getAuthHeaders } = useAuthContext();
 
     const [badges, setBadges] = useState([])
-    const [images, setImages] = useState([]);
 
     const [destination, setDestination] = useState({})
 
@@ -23,6 +22,9 @@ export default function Post() {
     const formInitialState = {shopname: "", shoplocation: ""};
     const [form, handleInputChange] = useForm(formInitialState);
 
+    const [image, setImage] = useState("");
+    const handleImageUpload = e => setImage(e.target.files[0]);
+
     async function handleSubmit(e){
         e.preventDefault();
 
@@ -31,7 +33,7 @@ export default function Post() {
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${getToken()}`
-                },
+            },
             body: JSON.stringify({...form, badges, destination, coords})
         }
 
@@ -47,12 +49,20 @@ export default function Post() {
             alert("Error: Couldn't post shop, your session has expired. Please log in again!")
             signOut()
         }
-    }
 
-    // const getFiles = e => {
-    //     setImages(e.target.files[0])
-    //     console.log(images);
-    // }
+        const formImage = new FormData();
+        formImage.append("File", image);
+        
+        const optionsImage = {
+            method: "POST",
+            headers: getAuthHeaders(),
+            body: formImage
+        }
+
+        const responseImage = await fetch(IMAGE_UPLOAD_URL + data.id, optionsImage);
+        // eslint-disable-next-line
+        const dataImage = await responseImage;
+    }
         
     //SOLUCIONES
     //https://www.npmjs.com/package/react-images-uploading
@@ -74,11 +84,11 @@ export default function Post() {
                 <div className="inputblock">
                     <Badges badges={badges} setBadges={setBadges} />
                 </div>
-                {/* <div className="inputblock">
-                    <input onChange={(e)=>getFiles(e)} type="file" name="pictures" accept="image/png, image/jpeg, image/jpg" />
-                </div> */}
+                <div className="inputblock">
+                    <input onChange={handleImageUpload} type="file" name="image" id="image" accept="image/png, image/jpeg, image/jpg" />
+                </div>
 
-                <Images images={images} setImages={setImages} />
+                {/* <Images images={images} setImages={setImages} /> */}
                 <MapInput coords={coords} setCoords={setCoords} />
 
                 <button type="submit">Submit your shop!</button>
