@@ -12,7 +12,7 @@ const DETAILS_URL = ROOT_URL + "/shopdetails/"; // + id
 const DESTINATIONS_URL = ROOT_URL + "/destinations";
 const LANGUAGES_URL = ROOT_URL + "/languages";
 const POPULAR_URL = ROOT_URL + "/popular";
-const DESTINATION_IMAGES_URL = ROOT_URL + "/images/"; // + filename.jpg
+const DESTINATION_IMAGES_URL = ROOT_URL + "/images/destinations/"; // + filename.jpg
 const CLICKCOUNTER_URL = ROOT_URL + "/clickcounter";
 
 // APIs protegidas
