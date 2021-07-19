@@ -1,7 +1,7 @@
 import React from 'react'
 import { countryCodeEmoji } from 'country-code-emoji'; // https://www.npmjs.com/package/country-code-emoji
 import { useHistory } from "react-router-dom";
-import { CLICKCOUNTER_URL } from '../../config';
+import { CLICKCOUNTER_URL, SHOP_IMAGES_URL } from '../../config';
 
 
 export default function Card({shop}) {
@@ -26,7 +26,7 @@ export default function Card({shop}) {
 
     return (
         <div className="card">
-            <div className="cardimg"></div>
+            <img src={SHOP_IMAGES_URL + shop.image} alt="Shop"/>
             <h3>{shop.name}</h3>
             <h4>{shop.location}</h4>
             <p>{shop.languages?.map(language => {

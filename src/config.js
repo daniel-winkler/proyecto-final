@@ -13,6 +13,7 @@ const DESTINATIONS_URL = ROOT_URL + "/destinations";
 const LANGUAGES_URL = ROOT_URL + "/languages";
 const POPULAR_URL = ROOT_URL + "/popular";
 const DESTINATION_IMAGES_URL = ROOT_URL + "/images/destinations/"; // + filename.jpg
+const SHOP_IMAGES_URL = ROOT_URL + "/images/shops/"; // + filename.jpg
 const CLICKCOUNTER_URL = ROOT_URL + "/clickcounter";
 
 // APIs protegidas
@@ -47,5 +48,6 @@ export {
     DESTINATION_IMAGES_URL,
     MAILER_URL,
     IMAGE_UPLOAD_URL,
-    IMAGE_UPDATE_URL
+    IMAGE_UPDATE_URL,
+    SHOP_IMAGES_URL
  }

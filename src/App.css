@@ -312,13 +312,9 @@ header img {
   margin: 10px;
 }
 
-.cardimg {
+.card img {
   height: 200px;
-  border-radius: 10px;
-  background-image: url("images/bg1.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: 100%;
 }
 
 .card img {
