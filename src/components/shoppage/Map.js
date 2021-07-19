@@ -7,7 +7,7 @@ const containerStyle = {
     height: '400px'
 };
   
-export default function Map({latitude, longitude}) {
+export default function Map({latitude=0, longitude=0}) { // añadimos valores por defecto para que no nos devuelva un error NaN
 
     const center = {
         lat: parseFloat(latitude),
