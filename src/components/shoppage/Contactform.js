@@ -33,12 +33,18 @@ export default function Contactform({id}) {
         <div className="shop">
                 <h4>Contact the shop</h4>
                 <form onSubmit={handleSubmit}>
-                    <label htmlFor="contactName">Name:</label>
-                    <input onChange={handleInputChange} value={form.name} type="text" name="name" id="contactName" required/>
-                    <label htmlFor="contactEmail">Email:</label>
-                    <input onChange={handleInputChange} value={form.email} type="email" name="email" id="contactEmail" required/>
-                    <label htmlFor="contactMessage">Message:</label>
-                    <textarea onChange={handleInputChange} value={form.message} name="message" id="contactMessage"></textarea>
+                    <div className="inputblock">
+                        <label htmlFor="contactName">Name:</label>
+                        <input onChange={handleInputChange} value={form.name} type="text" name="name" id="contactName" required/>
+                    </div>
+                    <div className="inputblock">
+                        <label htmlFor="contactEmail">Email:</label>
+                        <input onChange={handleInputChange} value={form.email} type="email" name="email" id="contactEmail" required/>
+                    </div>
+                    <div className="inputblock">
+                        <label htmlFor="contactMessage">Message:</label>
+                        <textarea onChange={handleInputChange} value={form.message} name="message" id="contactMessage"></textarea>
+                    </div>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
