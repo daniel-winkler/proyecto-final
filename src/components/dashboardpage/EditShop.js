@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState } from 'react';
 import { useForm } from '../../hooks/useForm'
-import { UPDATE_URL } from '../../config';
+import { UPDATE_URL, IMAGE_UPDATE_URL } from '../../config';
 import Badges from '../postpage/Badges';
 import Destinations from '../postpage/Destinations';
-import Images from "../postpage/Images"
+// import Images from "../postpage/Images"
 import MapInput from "../postpage/MapInput"
 import { useAuthContext } from '../../contexts/AuthContext';
 
@@ -12,10 +12,10 @@ export default function EditShop({shop}) {
 
     // TODO: recoger info del shop del usuario para ponerlos como initial state
 
-    const { getToken, signOut } = useAuthContext();
+    const { getToken, signOut, getAuthHeaders } = useAuthContext();
 
     const [badges, setBadges] = useState([])
-    const [images, setImages] = useState([]);
+    // const [images, setImages] = useState([]);
 
     const [destination, setDestination] = useState({})
 
@@ -24,6 +24,9 @@ export default function EditShop({shop}) {
 
     const formInitialState = {shopname: "", shoplocation: ""};
     const [form, handleInputChange] = useForm(formInitialState);
+
+    const [image, setImage] = useState("");
+    const handleImageUpload = e => setImage(e.target.files[0]);
 
     async function handleSubmit(e){
         e.preventDefault();
@@ -49,6 +52,19 @@ export default function EditShop({shop}) {
             alert("Something happened. Please log in again.")
             signOut()
         }
+
+        const formImage = new FormData();
+        formImage.append("File", image);
+        
+        const optionsImage = {
+            method: "POST",
+            headers: getAuthHeaders(),
+            body: formImage
+        }
+
+        const responseImage = await fetch(IMAGE_UPDATE_URL, optionsImage);
+        // eslint-disable-next-line
+        const dataImage = await responseImage;
     }
 
     return (
@@ -66,11 +82,11 @@ export default function EditShop({shop}) {
                 <div className="inputblock">
                     <Badges badges={badges} setBadges={setBadges} />
                 </div>
-                {/* <div className="inputblock">
-                    <input onChange={(e)=>getFiles(e)} type="file" name="pictures" accept="image/png, image/jpeg, image/jpg" />
-                </div> */}
+                <div className="inputblock">
+                    <input onChange={handleImageUpload} type="file" name="image" id="image" accept="image/png, image/jpeg, image/jpg" />
+                </div>
 
-                <Images images={images} setImages={setImages} />
+                {/* <Images images={images} setImages={setImages} /> */}
                 <MapInput coords={coords} setCoords={setCoords} />
 
                 <button type="submit">Update your shop!</button>

@@ -23,6 +23,7 @@ const DELETE_URL = ROOT_URL + "/api/delete";
 const UPDATE_URL = ROOT_URL + "/api/update";
 const ACCOUNT_URL = ROOT_URL + "/api/account";
 const IMAGE_UPLOAD_URL = ROOT_URL + "/api/uploadshopimage/"; // + id
+const IMAGE_UPDATE_URL = ROOT_URL + "/api/updateimage";
 
 // Mailer
 const MAILER_URL = ROOT_URL + "/mailer";
@@ -45,5 +46,6 @@ export {
     POPULAR_URL,
     DESTINATION_IMAGES_URL,
     MAILER_URL,
-    IMAGE_UPLOAD_URL
+    IMAGE_UPLOAD_URL,
+    IMAGE_UPDATE_URL
  }
