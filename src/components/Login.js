@@ -33,6 +33,7 @@ export default function Login() {
         if(response.status === 200){
             signIn(data.token) // TODO: data solo recibe info de token, segundo argumento de la funcion sigIn eliminada
             alert("You are logged in!")
+            history.push("/dashboard")
         } else {
             alert("Invalid credentials")
         }
