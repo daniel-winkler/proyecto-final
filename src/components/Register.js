@@ -1,8 +1,18 @@
 import React from 'react'
 import { useForm } from '../hooks/useForm'
 import { REGISTER_URL } from '../config'
+import { useEffect } from 'react';
+import { useAuthContext } from '../contexts/AuthContext';
 
 export default function Register() {
+
+    const { isAuthenticated, signOut } = useAuthContext()
+
+    useEffect(() => {
+        /* nos comprueba si hay un usuario ya logueado y cierra sesion en tal caso, por una experiencia de usuario coherente */
+        isAuthenticated && signOut();
+        // eslint-disable-next-line
+    }, [])
 
     const formInitialState = {newUsername: "", newEmail: "", newPassword: ""};
     const [form, handleInputChange] = useForm(formInitialState);
