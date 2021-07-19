@@ -11,6 +11,7 @@ export default function LoginPage() {
 
     useEffect(() => {
         isAuthenticated && history.push("/dashboard")
+        // eslint-disable-next-line
     }, [isAuthenticated])
 
     return (
