@@ -69,7 +69,7 @@ export default function Post() {
     // https://medium.com/swlh/integrating-an-image-upload-system-into-a-react-app-with-node-js-express-js-and-multer-d5ab5c4d1da8
 
     return (
-        <div>
+        <div className="postpage d-flex">
             <form onSubmit={handleSubmit} method="POST" className="postform divebox">
                 <h4>Post you shop here!</h4>
                 <div className="inputblock">

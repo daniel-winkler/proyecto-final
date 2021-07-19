@@ -233,6 +233,10 @@ header img {
 
 /* START POST SHOP PAGE  */
 
+.postpage {
+  justify-content: center;
+}
+
 .badges {
   align-items: center;
   flex-wrap: wrap;
@@ -500,6 +504,10 @@ footer i {
     width: 80%;
   }
 
+  .postpage form {
+    width: 75%;
+  }
+
 }
 
 @media only screen and (min-width: 1024px) { /* for Desktop */
@@ -515,6 +523,10 @@ footer i {
 
   .registerform {
     width: 25%;
+  }
+
+  .postpage form {
+    width: 60%;
   }
   
 }
