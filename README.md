@@ -10,7 +10,7 @@ Paso 2: En tu consola git clonar el proyecto con el comando `git clone https://g
 
 Paso 3: En la carpeta raíz del proyecto ejecutar `npm update` y despues `npm install`
 
-Paso 4: Dentro de la carpeta raíz crear un archivo .env y añadir la linea de código `REACT_APP_GOOGLE_API_KEY=AIzaSyCRdMHZRVefiG97mrDhnzxcO4JQByZw8lw`
+Paso 4: Dentro de la carpeta raíz crear un archivo .env y añadir la linea de código `REACT_APP_GOOGLE_API_KEY=TuPropiaGoogleAPIKey`. Puedes generar una API Key en [Google Cloud Platform](https://console.cloud.google.com)
 
 Paso 5: Ejecutar comando `npm start`
 
