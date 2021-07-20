@@ -28,7 +28,7 @@ export default function EditAccount({user}) {
         // eslint-disable-next-line
         const data = await response.json();
 
-        if(response.status === 202){
+        if(response.status === 202 || response.status === 200){
             alert("Account updated successfully! Please log in again with your new credentials.")
             signOut()
          } else if (response.status === 401){

@@ -3,8 +3,11 @@ import { useForm } from '../hooks/useForm'
 import { REGISTER_URL } from '../config'
 import { useEffect } from 'react';
 import { useAuthContext } from '../contexts/AuthContext';
+import { useHistory } from 'react-router';
 
 export default function Register() {
+
+    const history = useHistory();
 
     const { isAuthenticated, signOut } = useAuthContext()
 
@@ -32,6 +35,9 @@ export default function Register() {
 
         if(response.status === 201){
             alert("Account created successfully!")
+            history.push("/login")
+        } else {
+            alert("Whoops, something happened. Please try again.")
         }
     }
 
