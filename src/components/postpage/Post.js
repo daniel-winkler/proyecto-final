@@ -4,7 +4,6 @@ import { useForm } from '../../hooks/useForm'
 import { POST_URL, IMAGE_UPLOAD_URL } from '../../config';
 import Badges from './Badges';
 import Destinations from './Destinations';
-// import Images from "./Images"
 import MapInput from "./MapInput"
 import { useAuthContext } from '../../contexts/AuthContext';
 
@@ -63,10 +62,6 @@ export default function Post() {
         // eslint-disable-next-line
         const dataImage = await responseImage;
     }
-        
-    //SOLUCIONES
-    //https://www.npmjs.com/package/react-images-uploading
-    // https://medium.com/swlh/integrating-an-image-upload-system-into-a-react-app-with-node-js-express-js-and-multer-d5ab5c4d1da8
 
     return (
         <div className="postpage d-flex">
@@ -88,7 +83,6 @@ export default function Post() {
                     <input onChange={handleImageUpload} type="file" name="image" id="image" accept="image/png, image/jpeg, image/jpg" />
                 </div>
 
-                {/* <Images images={images} setImages={setImages} /> */}
                 <MapInput coords={coords} setCoords={setCoords} />
 
                 <button type="submit">Submit your shop!</button>

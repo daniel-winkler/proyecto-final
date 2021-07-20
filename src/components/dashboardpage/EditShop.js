@@ -4,7 +4,6 @@ import { useForm } from '../../hooks/useForm'
 import { UPDATE_URL, IMAGE_UPDATE_URL } from '../../config';
 import Badges from '../postpage/Badges';
 import Destinations from '../postpage/Destinations';
-// import Images from "../postpage/Images"
 import MapInput from "../postpage/MapInput"
 import { useAuthContext } from '../../contexts/AuthContext';
 
@@ -15,7 +14,6 @@ export default function EditShop({shop}) {
     const { getToken, signOut, getAuthHeaders } = useAuthContext();
 
     const [badges, setBadges] = useState([])
-    // const [images, setImages] = useState([]);
 
     const [destination, setDestination] = useState({})
 
@@ -86,7 +84,6 @@ export default function EditShop({shop}) {
                     <input onChange={handleImageUpload} type="file" name="image" id="image" accept="image/png, image/jpeg, image/jpg" />
                 </div>
 
-                {/* <Images images={images} setImages={setImages} /> */}
                 <MapInput coords={coords} setCoords={setCoords} />
 
                 <button type="submit">Update your shop!</button>
