@@ -36,8 +36,8 @@ export default function Register() {
         if(response.status === 201){
             alert("Account created successfully!")
             history.push("/login")
-        } else {
-            alert("Whoops, something happened. Please try again.")
+        } else if (response.status === 500) {
+            alert("Username or Email already exist. Please try again.")
         }
     }
 
