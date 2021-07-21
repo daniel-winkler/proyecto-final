@@ -24,8 +24,8 @@ export default function Contactform({id}) {
 
         if (response.status === 202){
             alert("Message has been sent successfully!")
-        } else if (response.status === 500){
-            alert("Something wrong happened.. please try again later")
+        } else if (response.status === 404){
+            alert("User or user email not found.")
         }
     }
 
