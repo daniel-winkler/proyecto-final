@@ -43,7 +43,7 @@ export default function Contactform({id}) {
                     </div>
                     <div className="inputblock">
                         <label htmlFor="contactMessage">Message:</label>
-                        <textarea onChange={handleInputChange} value={form.message} name="message" id="contactMessage"></textarea>
+                        <textarea onChange={handleInputChange} value={form.message} name="message" id="contactMessage" required></textarea>
                     </div>
                     <button type="submit">Send Message</button>
                 </form>
