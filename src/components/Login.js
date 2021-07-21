@@ -31,7 +31,7 @@ export default function Login() {
         const data = await response.json();
 
         if(response.status === 200){
-            signIn(data.token) // TODO: data solo recibe info de token, segundo argumento de la funcion sigIn eliminada
+            signIn(data.token)
             alert("You are logged in!")
             history.push("/dashboard")
         } else {

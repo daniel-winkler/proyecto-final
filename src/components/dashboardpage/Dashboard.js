@@ -10,7 +10,7 @@ import Collapsible from "react-collapsible"; // https://www.npmjs.com/package/re
 
 export default function Dashboard() {
 
-    const { getToken, signOut } = useAuthContext(); //TODO: isAuthorized?
+    const { getToken, signOut } = useAuthContext();
 
     const [ user, setUser ] = useState({})
 
