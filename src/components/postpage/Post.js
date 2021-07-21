@@ -18,7 +18,7 @@ export default function Post() {
     const initialCoords = {lat: 36.72043887896444, lng: -4.372293729292253};
     const [coords, setCoords] = useState(initialCoords)
 
-    const formInitialState = {shopname: "", shoplocation: ""};
+    const formInitialState = {shopname: "", shoplocation: "", shopoverview: ""};
     const [form, handleInputChange] = useForm(formInitialState);
 
     const [image, setImage] = useState("");
@@ -78,6 +78,10 @@ export default function Post() {
                 </div>
                 <div className="inputblock">
                     <Badges badges={badges} setBadges={setBadges} />
+                </div>
+                <div className="inputblock">
+                    <label htmlFor="shopoverview">Description:</label>
+                    <textarea onChange={handleInputChange} value={form.shopoverview} type="text" name="shopoverview" id="shopoverview" required/>
                 </div>
                 <div className="inputblock">
                     <input onChange={handleImageUpload} type="file" name="image" id="image" accept="image/png, image/jpeg, image/jpg" />
