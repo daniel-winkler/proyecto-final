@@ -20,7 +20,7 @@ export default function EditShop({shop}) {
     const initialCoords = {lat: 0, lng: 0};
     const [coords, setCoords] = useState(initialCoords)
 
-    const formInitialState = {shopname: "", shoplocation: ""};
+    const formInitialState = {shopname: "", shoplocation: "", shopoverview: ""};
     const [form, handleInputChange] = useForm(formInitialState);
 
     const [image, setImage] = useState("");
@@ -70,15 +70,19 @@ export default function EditShop({shop}) {
             <form onSubmit={handleSubmit} method="PUT" className="postform divebox">
                 <div className="inputblock">
                     <label htmlFor="shopname">Name:</label>
-                    <input onChange={handleInputChange} value={form.shopname} type="text" name="shopname" id="shopname" required/>
+                    <input onChange={handleInputChange} value={form.shopname} type="text" name="shopname" id="shopname" />
                 </div>
                 <div className="inputblock">
                     <label htmlFor="shoplocation">Location:</label>
-                    <input onChange={handleInputChange} value={form.shoplocation} type="text" name="shoplocation" id="shoplocation" required/>
+                    <input onChange={handleInputChange} value={form.shoplocation} type="text" name="shoplocation" id="shoplocation" />
                     <Destinations setDestination={setDestination} />
                 </div>
                 <div className="inputblock">
                     <Badges badges={badges} setBadges={setBadges} />
+                </div>
+                <div className="inputblock">
+                    <label htmlFor="shopoverview">Description:</label>
+                    <textarea onChange={handleInputChange} value={form.shopoverview} type="text" name="shopoverview" id="shopoverview" />
                 </div>
                 <div className="inputblock">
                     <input onChange={handleImageUpload} type="file" name="image" id="image" accept="image/png, image/jpeg, image/jpg" />
