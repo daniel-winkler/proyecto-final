@@ -9,6 +9,7 @@ export default function LoginPage() {
     const { isAuthenticated } = useAuthContext();
     const history = useHistory();
 
+    // al refrescar la pagina, nos comprueba si existe un token guardado en local storage y en tal caso nos redirige al dashboard
     useEffect(() => {
         isAuthenticated && history.push("/dashboard")
         // eslint-disable-next-line

@@ -14,15 +14,15 @@ export default function Badges({badges, setBadges}) {
     }, [])
 
     function addBadge (e){
-        const language = languages.filter(lang => e.target.value === lang.countrycode)[0]
+        const language = languages.filter(lang => e.target.value === lang.countrycode)[0] // busca el primer valor de la opcion seleccionada que coincida con el array de idiomas...
         if(!badges.includes(language)){
-            setBadges([...badges, language])
+            setBadges([...badges, language]) // ...y en caso que no exista ya en el array de badges, lo incluye
         }
     }
   
     function removeBadge(e){
       setBadges(
-        badges.filter(badge => badge.name !== e.target.innerText.split(' ')[0])
+        badges.filter(badge => badge.name !== e.target.innerText.split(' ')[0]) // split para excluir el emoji de la bandera al filtrar el nombre del idioma
       )
     }
 

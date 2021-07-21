@@ -14,10 +14,6 @@ export default function Map({latitude=0, longitude=0}) { // añadimos valores po
         lng: parseFloat(longitude)
     };
 
-    // https://developers.google.com/maps/documentation/javascript/examples/event-click-latlng#maps_event_click_latlng-javascript
-
-    // https://stackoverflow.com/questions/65399542/react-google-maps-api-how-to-search-current-location-for-a-search-result
-
     return (
         <div>
             <LoadScript googleMapsApiKey={GOOGLE_API_KEY}>
@@ -26,7 +22,7 @@ export default function Map({latitude=0, longitude=0}) { // añadimos valores po
                     onClick={() => {
                         window.open(`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`, "_blank");
                     }}
-                    position={center} /> { /* Child components, such as markers, info windows, etc. */ }
+                    position={center} />
                 </GoogleMap>
             </LoadScript>
         </div>

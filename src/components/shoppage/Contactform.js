@@ -15,7 +15,7 @@ export default function Contactform({id}) {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({...form, shopID: id})
+            body: JSON.stringify({...form, shopID: id}) // añadimos el id para que el endpoint encuentre el usuario correspondiente
         }
 
         const response = await fetch(MAILER_URL, options);
