@@ -45,13 +45,13 @@ export default function EditAccount({user}) {
             <form onSubmit={handleSubmit} className="registerform divebox" id="editform">
 
                 <label htmlFor="username">Username:</label>
-                <input onChange={handleInputChange} value={form.username} type="text" name="username" id="username" required/>
+                <input onChange={handleInputChange} value={form.username} type="text" name="username" id="username" />
 
                 <label htmlFor="email">Email:</label>
-                <input onChange={handleInputChange} value={form.email} type="email" name="email" id="email" required/>
+                <input onChange={handleInputChange} value={form.email} type="email" name="email" id="email" />
 
                 <label htmlFor="password">Password:</label>
-                <input onChange={handleInputChange} value={form.password} type="password" name="password" id="password" required/>
+                <input onChange={handleInputChange} value={form.password} type="password" name="password" id="password" />
 
                 <button type="submit">Update your account!</button>
             </form>
